@@ -1,9 +1,71 @@
 ======================================================
 Filename: script7.txt
-Running Test: [LClassB;@85ede7b
+Running Test: [LClassB;@2f2c9b19
 Recursive: true
-[LClassB;
-interface java.lang.Cloneable
-interface java.io.Serializable
+CLASS
+Class: [LClassB;
+SUPERCLASS -> Recursively Inspect
 class java.lang.Object
+   CLASS
+   Class: java.lang.Object
+   SUPERCLASS -> Recursively Inspect
+   null
+   java.lang.Object
+   public
+   finalize
+   class java.lang.Throwable
+   void
+   protected
+   wait
+   class java.lang.InterruptedException
+   long
+   int
+   void
+   public final
+   wait
+   class java.lang.InterruptedException
+   void
+   public final
+   wait
+   class java.lang.InterruptedException
+   long
+   void
+   public final native
+   equals
+   class java.lang.Object
+   boolean
+   public
+   toString
+   class java.lang.String
+   public
+   hashCode
+   int
+   public native
+   getClass
+   class java.lang.Class
+   public final native
+   clone
+   class java.lang.CloneNotSupportedException
+   class java.lang.Object
+   protected native
+   notify
+   void
+   public final native
+   notifyAll
+   void
+   public final native
+INTERFACES( interface java.lang.Cloneable )
+Interfaces-> 
+
+   CLASS
+   Class: java.lang.Cloneable
+   SUPERCLASS -> Recursively Inspect
+   null
+INTERFACES( interface java.io.Serializable )
+Interfaces-> 
+
+   CLASS
+   Class: java.io.Serializable
+   SUPERCLASS -> Recursively Inspect
+   null
 ======================================================

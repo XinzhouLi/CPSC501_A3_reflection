@@ -2,9 +2,159 @@
 Filename: script3.txt
 Running Test: ClassB
 Recursive: true
-ClassB
-interface java.lang.Runnable
+CLASS
+Class: ClassB
+SUPERCLASS -> Recursively Inspect
 class ClassC
+   CLASS
+   Class: ClassC
+   SUPERCLASS -> Recursively Inspect
+   class ClassD
+      CLASS
+      Class: ClassD
+      SUPERCLASS -> Recursively Inspect
+      class java.lang.Object
+         CLASS
+         Class: java.lang.Object
+         SUPERCLASS -> Recursively Inspect
+         null
+         java.lang.Object
+         public
+         finalize
+         class java.lang.Throwable
+         void
+         protected
+         wait
+         class java.lang.InterruptedException
+         long
+         int
+         void
+         public final
+         wait
+         class java.lang.InterruptedException
+         void
+         public final
+         wait
+         class java.lang.InterruptedException
+         long
+         void
+         public final native
+         equals
+         class java.lang.Object
+         boolean
+         public
+         toString
+         class java.lang.String
+         public
+         hashCode
+         int
+         public native
+         getClass
+         class java.lang.Class
+         public final native
+         clone
+         class java.lang.CloneNotSupportedException
+         class java.lang.Object
+         protected native
+         notify
+         void
+         public final native
+         notifyAll
+         void
+         public final native
+      ClassD
+      public
+      ClassD
+      [Ljava.lang.Class;@72ea2f77
+      public
+      toString
+      class java.lang.String
+      public
+      getVal3
+      int
+      public
+   INTERFACES( interface InterfaceA )
+   Interfaces-> 
+
+      CLASS
+      Class: InterfaceA
+      SUPERCLASS -> Recursively Inspect
+      null
+      INTERFACES( interface InterfaceB )
+      Interfaces-> 
+
+         CLASS
+         Class: InterfaceB
+         SUPERCLASS -> Recursively Inspect
+         null
+         func0
+         class java.lang.Exception
+         int
+         boolean
+         void
+         public abstract
+      func1
+      class java.lang.Exception
+      int
+      double
+      boolean
+      class java.lang.String
+      void
+      public abstract
+      func2
+      class java.lang.Exception
+      class java.lang.ArithmeticException
+      class java.lang.IllegalMonitorStateException
+      class java.lang.String
+      int
+      public abstract
+   ClassC
+   public
+   ClassC
+   [Ljava.lang.Class;@33c7353a
+   [Ljava.lang.Class;@33c7353a
+   public
+   run
+   void
+   public
+   toString
+   class java.lang.String
+   public
+   func3
+   int
+   void
+   public abstract
+   func0
+   class java.lang.Exception
+   int
+   boolean
+   void
+   public
+   func1
+   class java.lang.Exception
+   int
+   double
+   boolean
+   class java.lang.String
+   void
+   public
+   func2
+   class java.lang.Exception
+   class java.lang.ArithmeticException
+   class java.lang.IllegalMonitorStateException
+   class java.lang.String
+   int
+   public
+INTERFACES( interface java.lang.Runnable )
+Interfaces-> 
+
+   CLASS
+   Class: java.lang.Runnable
+   SUPERCLASS -> Recursively Inspect
+   null
+   run
+   void
+   public abstract
 ClassB
 class java.lang.Exception
 public

@@ -2,90 +2,217 @@
 Filename: script8.txt
 Running Test: Test String
 Recursive: true
-java.lang.String
-interface java.io.Serializable
-interface java.lang.Comparable
-interface java.lang.CharSequence
-interface java.lang.constant.Constable
-interface java.lang.constant.ConstantDesc
+CLASS
+Class: java.lang.String
+SUPERCLASS -> Recursively Inspect
 class java.lang.Object
+   CLASS
+   Class: java.lang.Object
+   SUPERCLASS -> Recursively Inspect
+   null
+   java.lang.Object
+   public
+   finalize
+   class java.lang.Throwable
+   void
+   protected
+   wait
+   class java.lang.InterruptedException
+   long
+   int
+   void
+   public final
+   wait
+   class java.lang.InterruptedException
+   void
+   public final
+   wait
+   class java.lang.InterruptedException
+   long
+   void
+   public final native
+   equals
+   class java.lang.Object
+   boolean
+   public
+   toString
+   class java.lang.String
+   public
+   hashCode
+   int
+   public native
+   getClass
+   class java.lang.Class
+   public final native
+   clone
+   class java.lang.CloneNotSupportedException
+   class java.lang.Object
+   protected native
+   notify
+   void
+   public final native
+   notifyAll
+   void
+   public final native
+INTERFACES( interface java.io.Serializable )
+Interfaces-> 
+
+   CLASS
+   Class: java.io.Serializable
+   SUPERCLASS -> Recursively Inspect
+   null
+INTERFACES( interface java.lang.Comparable )
+Interfaces-> 
+
+   CLASS
+   Class: java.lang.Comparable
+   SUPERCLASS -> Recursively Inspect
+   null
+   compareTo
+   class java.lang.Object
+   int
+   public abstract
+INTERFACES( interface java.lang.CharSequence )
+Interfaces-> 
+
+   CLASS
+   Class: java.lang.CharSequence
+   SUPERCLASS -> Recursively Inspect
+   null
+   length
+   int
+   public abstract
+   toString
+   class java.lang.String
+   public abstract
+   compare
+   interface java.lang.CharSequence
+   interface java.lang.CharSequence
+   int
+   public static
+   charAt
+   int
+   char
+   public abstract
+   isEmpty
+   boolean
+   public
+   codePoints
+   interface java.util.stream.IntStream
+   public
+   subSequence
+   int
+   int
+   interface java.lang.CharSequence
+   public abstract
+   chars
+   interface java.util.stream.IntStream
+   public
+   lambda$codePoints$1
+   interface java.util.Spliterator$OfInt
+   private
+   lambda$chars$0
+   interface java.util.Spliterator$OfInt
+   private
+INTERFACES( interface java.lang.constant.Constable )
+Interfaces-> 
+
+   CLASS
+   Class: java.lang.constant.Constable
+   SUPERCLASS -> Recursively Inspect
+   null
+   describeConstable
+   class java.util.Optional
+   public abstract
+INTERFACES( interface java.lang.constant.ConstantDesc )
+Interfaces-> 
+
+   CLASS
+   Class: java.lang.constant.ConstantDesc
+   SUPERCLASS -> Recursively Inspect
+   null
+   resolveConstantDesc
+   class java.lang.ReflectiveOperationException
+   class java.lang.invoke.MethodHandles$Lookup
+   class java.lang.Object
+   public abstract
 java.lang.String
-[Ljava.lang.Class;@5674cd4d
+[Ljava.lang.Class;@31befd9f
 public
 java.lang.String
-[Ljava.lang.Class;@63961c42
+[Ljava.lang.Class;@1c20c684
 public
 java.lang.String
-[Ljava.lang.Class;@65b54208
-[Ljava.lang.Class;@65b54208
-[Ljava.lang.Class;@65b54208
-[Ljava.lang.Class;@65b54208
+[Ljava.lang.Class;@1fb3ebeb
+[Ljava.lang.Class;@1fb3ebeb
+[Ljava.lang.Class;@1fb3ebeb
+[Ljava.lang.Class;@1fb3ebeb
 
 java.lang.String
-[Ljava.lang.Class;@1be6f5c3
-[Ljava.lang.Class;@1be6f5c3
+[Ljava.lang.Class;@548c4f57
+[Ljava.lang.Class;@548c4f57
 
 java.lang.String
-[Ljava.lang.Class;@6b884d57
-[Ljava.lang.Class;@6b884d57
-[Ljava.lang.Class;@6b884d57
-[Ljava.lang.Class;@6b884d57
+[Ljava.lang.Class;@1218025c
+[Ljava.lang.Class;@1218025c
+[Ljava.lang.Class;@1218025c
+[Ljava.lang.Class;@1218025c
 public
 java.lang.String
 class java.io.UnsupportedEncodingException
-[Ljava.lang.Class;@38af3868
-[Ljava.lang.Class;@38af3868
+[Ljava.lang.Class;@816f27d
+[Ljava.lang.Class;@816f27d
 public
 java.lang.String
-[Ljava.lang.Class;@77459877
-[Ljava.lang.Class;@77459877
+[Ljava.lang.Class;@87aac27
+[Ljava.lang.Class;@87aac27
 public
 java.lang.String
-[Ljava.lang.Class;@5b2133b1
-[Ljava.lang.Class;@5b2133b1
-[Ljava.lang.Class;@5b2133b1
+[Ljava.lang.Class;@3e3abc88
+[Ljava.lang.Class;@3e3abc88
+[Ljava.lang.Class;@3e3abc88
 public
 java.lang.String
-[Ljava.lang.Class;@72ea2f77
+[Ljava.lang.Class;@6ce253f1
 public
 java.lang.String
-[Ljava.lang.Class;@33c7353a
-[Ljava.lang.Class;@33c7353a
+[Ljava.lang.Class;@53d8d10a
+[Ljava.lang.Class;@53d8d10a
 
 java.lang.String
-[Ljava.lang.Class;@681a9515
-[Ljava.lang.Class;@681a9515
-[Ljava.lang.Class;@681a9515
+[Ljava.lang.Class;@e9e54c2
+[Ljava.lang.Class;@e9e54c2
+[Ljava.lang.Class;@e9e54c2
 public
 java.lang.String
-[Ljava.lang.Class;@3af49f1c
+[Ljava.lang.Class;@65ab7765
 public
 java.lang.String
-[Ljava.lang.Class;@19469ea2
+[Ljava.lang.Class;@1b28cdfa
 public
 java.lang.String
 public
 java.lang.String
 class java.io.UnsupportedEncodingException
-[Ljava.lang.Class;@13221655
-[Ljava.lang.Class;@13221655
-[Ljava.lang.Class;@13221655
-[Ljava.lang.Class;@13221655
+[Ljava.lang.Class;@eed1f14
+[Ljava.lang.Class;@eed1f14
+[Ljava.lang.Class;@eed1f14
+[Ljava.lang.Class;@eed1f14
 public
 java.lang.String
-[Ljava.lang.Class;@2f2c9b19
-[Ljava.lang.Class;@2f2c9b19
+[Ljava.lang.Class;@7229724f
+[Ljava.lang.Class;@7229724f
 public
 java.lang.String
-[Ljava.lang.Class;@31befd9f
-[Ljava.lang.Class;@31befd9f
-[Ljava.lang.Class;@31befd9f
-[Ljava.lang.Class;@31befd9f
+[Ljava.lang.Class;@4c873330
+[Ljava.lang.Class;@4c873330
+[Ljava.lang.Class;@4c873330
+[Ljava.lang.Class;@4c873330
 public
 java.lang.String
-[Ljava.lang.Class;@1c20c684
-[Ljava.lang.Class;@1c20c684
-[Ljava.lang.Class;@1c20c684
+[Ljava.lang.Class;@119d7047
+[Ljava.lang.Class;@119d7047
+[Ljava.lang.Class;@119d7047
 public
 value
 class [B

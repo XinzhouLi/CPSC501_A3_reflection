@@ -2,12 +2,62 @@
 Filename: script4.txt
 Running Test: ClassD
 Recursive: true
-ClassD
+CLASS
+Class: ClassD
+SUPERCLASS -> Recursively Inspect
 class java.lang.Object
+   CLASS
+   Class: java.lang.Object
+   SUPERCLASS -> Recursively Inspect
+   null
+   java.lang.Object
+   public
+   finalize
+   class java.lang.Throwable
+   void
+   protected
+   wait
+   class java.lang.InterruptedException
+   long
+   int
+   void
+   public final
+   wait
+   class java.lang.InterruptedException
+   void
+   public final
+   wait
+   class java.lang.InterruptedException
+   long
+   void
+   public final native
+   equals
+   class java.lang.Object
+   boolean
+   public
+   toString
+   class java.lang.String
+   public
+   hashCode
+   int
+   public native
+   getClass
+   class java.lang.Class
+   public final native
+   clone
+   class java.lang.CloneNotSupportedException
+   class java.lang.Object
+   protected native
+   notify
+   void
+   public final native
+   notifyAll
+   void
+   public final native
 ClassD
 public
 ClassD
-[Ljava.lang.Class;@3f99bd52
+[Ljava.lang.Class;@681a9515
 public
 toString
 class java.lang.String

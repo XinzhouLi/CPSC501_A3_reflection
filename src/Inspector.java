@@ -1,3 +1,4 @@
+import javax.lang.model.type.NullType;
 import java.lang.reflect.*;
 
 /**
@@ -14,9 +15,12 @@ public class Inspector {
     }
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
+        if (c == null){
+            return;
+        }
         inspectName(c, obj, recursive, depth);
-        inspectInterface(c, obj, recursive, depth);
         inspectSuperclass(c, obj, recursive, depth);
+        inspectInterface(c, obj, recursive, depth);
         inspectConstructor(c, obj, recursive, depth);
         inspectMethod(c, obj, recursive, depth);
         inspectFields(c, obj, recursive, depth);
@@ -25,56 +29,68 @@ public class Inspector {
 
     private void inspectName(Class c, Object obj, boolean recursive, int depth){
         String name = c.getName();
-        System.out.println(name);
-
+        System.out.println(dent(depth) + "CLASS\n" + dent(depth)+"Class: "+name);
     }
 
-    private void inspectInterface(Class c, Object obj, boolean recursive, int depth){
+    private void inspectInterface(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
         Class[] interfaceA = c.getInterfaces();
         for (int i = 0; i < interfaceA.length; i++) {
-            System.out.println(interfaceA[i]);
+
+            if (interfaceA[i] == Object.class && c == Object.class){
+                System.out.println(	dent(depth)+"INTERFACES( java.lang.Object )\nInterfaces-> NONE\n");
+                return;
+            }else {
+                System.out.println(dent(depth)+"INTERFACES( "+interfaceA[i]+" )\n"+dent(depth)+"Interfaces-> \n");
+                inspectClass(interfaceA[i],null, recursive, depth+1);
+            }
         }
     }
 
-    private void inspectSuperclass(Class c, Object obj, boolean recursive, int depth){
+    private void inspectSuperclass(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
         Class superC = c.getSuperclass();
-        System.out.println(superC);
+        if (superC == Object.class && c == Object.class) {
+            System.out.println(dent(depth)+"SuperClass: NONE");
+            return;
+        }else {
+            System.out.println(dent(depth) +"SUPERCLASS -> Recursively Inspect\n"  + dent(depth)+superC);
+            inspectClass(superC, null, recursive,  depth+1);
+        }
     }
 
     private void inspectConstructor(Class c, Object obj, boolean recursive, int depth){
         Constructor[] constructorA = c.getDeclaredConstructors();
         for (int i = 0; i < constructorA.length; i++) {
             Constructor temp =  constructorA[i];
-            System.out.println(temp.getName());
+            System.out.println(dent(depth) +temp.getName());
             Class[] exceptionA = temp.getExceptionTypes();
             for (int j = 0; j < exceptionA.length; j++) {
-                System.out.println(exceptionA[j]);
+                System.out.println(dent(depth) +exceptionA[j]);
             }
             Class[] parameterA = temp.getParameterTypes();
             for (int j = 0; j < parameterA.length; j++) {
-                System.out.println(parameterA);
+                System.out.println(dent(depth) +parameterA);
             }
             int modfi = temp.getModifiers();
-            System.out.println(Modifier.toString(modfi));
+            System.out.println(dent(depth) +Modifier.toString(modfi));
         }
     }
     private void inspectMethod(Class c, Object obj, boolean recursive, int depth){
         Method[] methodA = c.getDeclaredMethods();
         for (int i = 0; i < methodA.length; i++) {
             Method temp =  methodA[i];
-            System.out.println(temp.getName());
+            System.out.println(dent(depth) +temp.getName());
             Class[] exceptionA = temp.getExceptionTypes();
             for (int j = 0; j < exceptionA.length; j++) {
-                System.out.println(exceptionA[j]);
+                System.out.println(dent(depth) +exceptionA[j]);
             }
             Class[] parameterA = temp.getParameterTypes();
             for (int j = 0; j < parameterA.length; j++) {
-                System.out.println(parameterA[j]);
+                System.out.println(dent(depth) +parameterA[j]);
             }
             Class returnA = temp.getReturnType();
-            System.out.println(returnA);
+            System.out.println(dent(depth) +returnA);
             int modfi = temp.getModifiers();
-            System.out.println(Modifier.toString(modfi));
+            System.out.println(dent(depth) +Modifier.toString(modfi));
         }
     }
 
@@ -82,13 +98,21 @@ public class Inspector {
         Field[] fieldsA = c.getFields();
         for (int i = 0; i < fieldsA.length; i++) {
             Field temp =  fieldsA[i];
-            System.out.println(temp.getName());
+            System.out.println(dent(depth) +temp.getName());
             Class type = temp.getType();
-            System.out.println(type);
+            System.out.println(dent(depth) +type);
             int modfi = temp.getModifiers();
-            System.out.println(Modifier.toString(modfi));
+            System.out.println(dent(depth) +Modifier.toString(modfi));
             Object value = fieldsA[i].get(obj);
         }
+    }
+
+    public String dent(int depth){
+        String temp = "";
+        for (int i = 0; i < depth; i++) {
+            temp += "   ";
+        }
+        return temp;
     }
     public static void main(String[] args) throws IllegalAccessException {
         String g = "Hello, World!";
