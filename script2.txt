@@ -8,8 +8,9 @@ SUPERCLASS -> Recursively Inspect
 SuperClass: class java.lang.Object
    CLASS
    Class: java.lang.Object
-   SUPERCLASS -> Recursively Inspect
-   SuperClass: null
+   SuperClass: NONE
+   INTERFACES( class java.lang.Object )
+   Interfaces-> NONE
    CONSTRUCTORS( class java.lang.Object )
    Constructors->
       CONSTRUCTORS->
@@ -31,8 +32,8 @@ SuperClass: class java.lang.Object
          Exceptions->
          class java.lang.InterruptedException
          Parameter types-> 
-         [Ljava.lang.Class;@27bc2616
-         [Ljava.lang.Class;@27bc2616
+         long
+         int
          Return type: void
          Modifiers: public final
       METHOD
@@ -47,14 +48,14 @@ SuperClass: class java.lang.Object
          Exceptions->
          class java.lang.InterruptedException
          Parameter types-> 
-         [Ljava.lang.Class;@3941a79c
+         long
          Return type: void
          Modifiers: public final native
       METHOD
          Name: equals
          Exceptions-> NONE
          Parameter types-> 
-         [Ljava.lang.Class;@506e1b77
+         java.lang.Object
          Return type: boolean
          Modifiers: public
       METHOD
@@ -94,24 +95,32 @@ SuperClass: class java.lang.Object
          Parameter types-> NONE
          Return type: void
          Modifiers: public final native
-INTERFACES( interface java.io.Serializable )
-Interfaces-> 
-
+   FIELDS( class java.lang.Object )
+   Fields-> NONE
+INTERFACES( class ClassA )
+Interfaces->
+SUPERCLASS -> Recursively Inspect
+interface java.io.Serializable
    CLASS
    Class: java.io.Serializable
    SUPERCLASS -> Recursively Inspect
    SuperClass: null
+   INTERFACES( interface java.io.Serializable )
+   Interfaces-> NONE
    CONSTRUCTORS( interface java.io.Serializable )
    Constructors-> NONE
    METHODS( interface java.io.Serializable )
    Methods-> NONE
-INTERFACES( interface java.lang.Runnable )
-Interfaces-> 
-
+   FIELDS( interface java.io.Serializable )
+   Fields-> NONE
+SUPERCLASS -> Recursively Inspect
+interface java.lang.Runnable
    CLASS
    Class: java.lang.Runnable
    SUPERCLASS -> Recursively Inspect
    SuperClass: null
+   INTERFACES( interface java.lang.Runnable )
+   Interfaces-> NONE
    CONSTRUCTORS( interface java.lang.Runnable )
    Constructors-> NONE
    METHODS( interface java.lang.Runnable )
@@ -122,6 +131,8 @@ Interfaces->
          Parameter types-> NONE
          Return type: void
          Modifiers: public abstract
+   FIELDS( interface java.lang.Runnable )
+   Fields-> NONE
 CONSTRUCTORS( class ClassA )
 Constructors->
    CONSTRUCTORS->
@@ -133,7 +144,7 @@ Constructors->
       Name: ClassA
       Exceptions-> NONE
       Parameter types-> 
-      [Ljava.lang.Class;@4fca772d
+      int
       Modifiers: public
 METHODS( class ClassA )
 Methods->
@@ -150,18 +161,18 @@ Methods->
       Return type: class java.lang.String
       Modifiers: public
    METHOD
-      Name: setVal
-      Exceptions->
-      class java.lang.Exception
-      Parameter types-> 
-      [Ljava.lang.Class;@9807454
-      Return type: void
-      Modifiers: public
-   METHOD
       Name: getVal
       Exceptions-> NONE
       Parameter types-> NONE
       Return type: int
+      Modifiers: public
+   METHOD
+      Name: setVal
+      Exceptions->
+      class java.lang.Exception
+      Parameter types-> 
+      int
+      Return type: void
       Modifiers: public
    METHOD
       Name: printSomething
@@ -169,4 +180,6 @@ Methods->
       Parameter types-> NONE
       Return type: void
       Modifiers: private
+FIELDS( class ClassA )
+Fields-> NONE
 ======================================================

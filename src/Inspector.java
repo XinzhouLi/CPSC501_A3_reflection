@@ -40,24 +40,24 @@ public class Inspector {
     }
 
     private void inspectInterface(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
+        System.out.println(dent(depth) + "INTERFACES( " + c + " )");
         Class[] interfaceA = c.getInterfaces();
-        for (int i = 0; i < interfaceA.length; i++) {
-
-            if (interfaceA[i] == Object.class && c == Object.class) {
-                System.out.println(dent(depth) + "INTERFACES( java.lang.Object )\n" +
-                        "Interfaces-> NONE\n");
-                return;
-            } else {
-                System.out.println(dent(depth) + "INTERFACES( " + interfaceA[i] + " )\n"
-                        + dent(depth) + "Interfaces-> \n");
+        if (interfaceA.length == 0) {
+            System.out.println(dent(depth) + "Interfaces-> NONE");
+        } else {
+            System.out.println(dent(depth) + "Interfaces->");
+            for (int i = 0; i < interfaceA.length; i++) {
+                System.out.println(dent(depth) + "SUPERCLASS -> Recursively Inspect\n" + dent(depth) + interfaceA[i]);
                 inspectClass(interfaceA[i], null, recursive, depth + 1);
+
             }
         }
+
     }
 
     private void inspectSuperclass(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
         Class superC = c.getSuperclass();
-        if (superC == Object.class && c == Object.class) {
+        if (superC == null && c == Object.class) {
             System.out.println(dent(depth) + "SuperClass: NONE");
         } else {
             System.out.println(dent(depth) + "SUPERCLASS -> Recursively Inspect\n" + dent(depth) + "SuperClass: " + superC);
@@ -74,32 +74,32 @@ public class Inspector {
 
             System.out.println(dent(depth) + "Constructors->");
             for (int i = 0; i < constructorA.length; i++) {
-                System.out.println(dent(depth+1) + "CONSTRUCTORS->");
+                System.out.println(dent(depth + 1) + "CONSTRUCTORS->");
                 Constructor temp = constructorA[i];
-                System.out.println(dent(depth+2) +"Name: "+ temp.getName());
+                System.out.println(dent(depth + 2) + "Name: " + temp.getName());
 
                 Class[] exceptionA = temp.getExceptionTypes();
-                if (exceptionA.length == 0){
-                    System.out.println(dent(depth+2) + "Exceptions-> NONE");
-                }else {
-                    System.out.println(dent(depth+2) + "Exceptions->");
+                if (exceptionA.length == 0) {
+                    System.out.println(dent(depth + 2) + "Exceptions-> NONE");
+                } else {
+                    System.out.println(dent(depth + 2) + "Exceptions->");
                     for (int j = 0; j < exceptionA.length; j++) {
-                        System.out.println(dent(depth+2) + exceptionA[j]);
+                        System.out.println(dent(depth + 2) + exceptionA[j]);
                     }
                 }
 
                 Class[] parameterA = temp.getParameterTypes();
-                if (parameterA.length == 0){
-                    System.out.println(dent(depth+2) + "Parameter types-> NONE");
-                }else {
-                    System.out.println(dent(depth+2) + "Parameter types-> ");
+                if (parameterA.length == 0) {
+                    System.out.println(dent(depth + 2) + "Parameter types-> NONE");
+                } else {
+                    System.out.println(dent(depth + 2) + "Parameter types-> ");
                     for (int j = 0; j < parameterA.length; j++) {
-                        System.out.println(dent(depth+2) + parameterA);
+                        System.out.println(dent(depth + 2) + parameterA[j].getName());
                     }
                 }
 
                 int modfi = temp.getModifiers();
-                System.out.println(dent(depth+2) + "Modifiers: "+Modifier.toString(modfi));
+                System.out.println(dent(depth + 2) + "Modifiers: " + Modifier.toString(modfi));
             }
         }
     }
@@ -107,53 +107,59 @@ public class Inspector {
     private void inspectMethod(Class c, Object obj, boolean recursive, int depth) {
         System.out.println(dent(depth) + "METHODS( " + c + " )");
         Method[] methodA = c.getDeclaredMethods();
-        if (methodA.length == 0){
+        if (methodA.length == 0) {
             System.out.println(dent(depth) + "Methods-> NONE");
-        }
-        else {
+        } else {
             System.out.println(dent(depth) + "Methods->");
             for (int i = 0; i < methodA.length; i++) {
                 Method temp = methodA[i];
-                System.out.println(dent(depth+1) + "METHOD\n"+dent(depth+2)+ "Name: " + temp.getName());
+                System.out.println(dent(depth + 1) + "METHOD\n" + dent(depth + 2) + "Name: " + temp.getName());
 
                 Class[] exceptionA = temp.getExceptionTypes();
-                if (exceptionA.length == 0){
-                    System.out.println(dent(depth+2) + "Exceptions-> NONE");
-                }else {
-                    System.out.println(dent(depth+2) + "Exceptions->");
+                if (exceptionA.length == 0) {
+                    System.out.println(dent(depth + 2) + "Exceptions-> NONE");
+                } else {
+                    System.out.println(dent(depth + 2) + "Exceptions->");
                     for (int j = 0; j < exceptionA.length; j++) {
-                        System.out.println(dent(depth+2) + exceptionA[j]);
+                        System.out.println(dent(depth + 2) + exceptionA[j]);
                     }
                 }
 
                 Class[] parameterA = temp.getParameterTypes();
-                if (parameterA.length == 0){
-                    System.out.println(dent(depth+2) + "Parameter types-> NONE");
-                }else {
-                    System.out.println(dent(depth+2) + "Parameter types-> ");
+                if (parameterA.length == 0) {
+                    System.out.println(dent(depth + 2) + "Parameter types-> NONE");
+                } else {
+                    System.out.println(dent(depth + 2) + "Parameter types-> ");
                     for (int j = 0; j < parameterA.length; j++) {
-                        System.out.println(dent(depth+2) + parameterA);
+                        System.out.println(dent(depth + 2) + parameterA[j].getName());
                     }
                 }
 
                 Class returnA = temp.getReturnType();
-                System.out.println(dent(depth+2) + "Return type: "+returnA);
+                System.out.println(dent(depth + 2) + "Return type: " + returnA);
                 int modfi = temp.getModifiers();
-                System.out.println(dent(depth+2) + "Modifiers: "+Modifier.toString(modfi));
+                System.out.println(dent(depth + 2) + "Modifiers: " + Modifier.toString(modfi));
             }
         }
     }
 
     private void inspectFields(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
+        System.out.println(dent(depth) + "FIELDS( " + c + " )");
         Field[] fieldsA = c.getFields();
-        for (int i = 0; i < fieldsA.length; i++) {
-            Field temp = fieldsA[i];
-            System.out.println(dent(depth) + temp.getName());
-            Class type = temp.getType();
-            System.out.println(dent(depth) + type);
-            int modfi = temp.getModifiers();
-            System.out.println(dent(depth) + Modifier.toString(modfi));
-            Object value = fieldsA[i].get(obj);
+        if (fieldsA.length == 0) {
+            System.out.println(dent(depth) + "Fields-> NONE");
+        } else {
+            System.out.println(dent(depth) + "Fields->");
+            for (int i = 0; i < fieldsA.length; i++) {
+                System.out.println(dent(depth + 1) + "FIELD");
+                Field temp = fieldsA[i];
+                System.out.println(dent(depth + 2) + "Name: " + temp.getName());
+                Class type = temp.getType();
+                System.out.println(dent(depth + 2) + "Type: " + type);
+                int modfi = temp.getModifiers();
+                System.out.println(dent(depth + 2) + "Modifiers: " + Modifier.toString(modfi));
+                Object value = fieldsA[i].get(obj);
+            }
         }
     }
 

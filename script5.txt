@@ -8,8 +8,9 @@ SUPERCLASS -> Recursively Inspect
 SuperClass: class java.lang.Object
    CLASS
    Class: java.lang.Object
-   SUPERCLASS -> Recursively Inspect
-   SuperClass: null
+   SuperClass: NONE
+   INTERFACES( class java.lang.Object )
+   Interfaces-> NONE
    CONSTRUCTORS( class java.lang.Object )
    Constructors->
       CONSTRUCTORS->
@@ -31,8 +32,8 @@ SuperClass: class java.lang.Object
          Exceptions->
          class java.lang.InterruptedException
          Parameter types-> 
-         [Ljava.lang.Class;@49097b5d
-         [Ljava.lang.Class;@49097b5d
+         long
+         int
          Return type: void
          Modifiers: public final
       METHOD
@@ -47,14 +48,14 @@ SuperClass: class java.lang.Object
          Exceptions->
          class java.lang.InterruptedException
          Parameter types-> 
-         [Ljava.lang.Class;@6e2c634b
+         long
          Return type: void
          Modifiers: public final native
       METHOD
          Name: equals
          Exceptions-> NONE
          Parameter types-> 
-         [Ljava.lang.Class;@37a71e93
+         java.lang.Object
          Return type: boolean
          Modifiers: public
       METHOD
@@ -94,6 +95,10 @@ SuperClass: class java.lang.Object
          Parameter types-> NONE
          Return type: void
          Modifiers: public final native
+   FIELDS( class java.lang.Object )
+   Fields-> NONE
+INTERFACES( class ClassD )
+Interfaces-> NONE
 CONSTRUCTORS( class ClassD )
 Constructors->
    CONSTRUCTORS->
@@ -105,7 +110,7 @@ Constructors->
       Name: ClassD
       Exceptions-> NONE
       Parameter types-> 
-      [Ljava.lang.Class;@7e6cbb7a
+      int
       Modifiers: public
 METHODS( class ClassD )
 Methods->
@@ -121,4 +126,6 @@ Methods->
       Parameter types-> NONE
       Return type: int
       Modifiers: public
+FIELDS( class ClassD )
+Fields-> NONE
 ======================================================

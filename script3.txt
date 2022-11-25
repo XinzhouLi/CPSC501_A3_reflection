@@ -16,8 +16,9 @@ SuperClass: class ClassC
       SuperClass: class java.lang.Object
          CLASS
          Class: java.lang.Object
-         SUPERCLASS -> Recursively Inspect
-         SuperClass: null
+         SuperClass: NONE
+         INTERFACES( class java.lang.Object )
+         Interfaces-> NONE
          CONSTRUCTORS( class java.lang.Object )
          Constructors->
             CONSTRUCTORS->
@@ -39,8 +40,8 @@ SuperClass: class ClassC
                Exceptions->
                class java.lang.InterruptedException
                Parameter types-> 
-               [Ljava.lang.Class;@30dae81
-               [Ljava.lang.Class;@30dae81
+               long
+               int
                Return type: void
                Modifiers: public final
             METHOD
@@ -55,14 +56,14 @@ SuperClass: class ClassC
                Exceptions->
                class java.lang.InterruptedException
                Parameter types-> 
-               [Ljava.lang.Class;@1b2c6ec2
+               long
                Return type: void
                Modifiers: public final native
             METHOD
                Name: equals
                Exceptions-> NONE
                Parameter types-> 
-               [Ljava.lang.Class;@4edde6e5
+               java.lang.Object
                Return type: boolean
                Modifiers: public
             METHOD
@@ -102,6 +103,10 @@ SuperClass: class ClassC
                Parameter types-> NONE
                Return type: void
                Modifiers: public final native
+         FIELDS( class java.lang.Object )
+         Fields-> NONE
+      INTERFACES( class ClassD )
+      Interfaces-> NONE
       CONSTRUCTORS( class ClassD )
       Constructors->
          CONSTRUCTORS->
@@ -113,7 +118,7 @@ SuperClass: class ClassC
             Name: ClassD
             Exceptions-> NONE
             Parameter types-> 
-            [Ljava.lang.Class;@70177ecd
+            int
             Modifiers: public
       METHODS( class ClassD )
       Methods->
@@ -129,20 +134,26 @@ SuperClass: class ClassC
             Parameter types-> NONE
             Return type: int
             Modifiers: public
-   INTERFACES( interface InterfaceA )
-   Interfaces-> 
-
+      FIELDS( class ClassD )
+      Fields-> NONE
+   INTERFACES( class ClassC )
+   Interfaces->
+   SUPERCLASS -> Recursively Inspect
+   interface InterfaceA
       CLASS
       Class: InterfaceA
       SUPERCLASS -> Recursively Inspect
       SuperClass: null
-      INTERFACES( interface InterfaceB )
-      Interfaces-> 
-
+      INTERFACES( interface InterfaceA )
+      Interfaces->
+      SUPERCLASS -> Recursively Inspect
+      interface InterfaceB
          CLASS
          Class: InterfaceB
          SUPERCLASS -> Recursively Inspect
          SuperClass: null
+         INTERFACES( interface InterfaceB )
+         Interfaces-> NONE
          CONSTRUCTORS( interface InterfaceB )
          Constructors-> NONE
          METHODS( interface InterfaceB )
@@ -152,14 +163,27 @@ SuperClass: class ClassC
                Exceptions->
                class java.lang.Exception
                Parameter types-> 
-               [Ljava.lang.Class;@1e80bfe8
-               [Ljava.lang.Class;@1e80bfe8
+               int
+               boolean
                Return type: void
                Modifiers: public abstract
+         FIELDS( interface InterfaceB )
+         Fields-> NONE
       CONSTRUCTORS( interface InterfaceA )
       Constructors-> NONE
       METHODS( interface InterfaceA )
       Methods->
+         METHOD
+            Name: func1
+            Exceptions->
+            class java.lang.Exception
+            Parameter types-> 
+            int
+            double
+            boolean
+            java.lang.String
+            Return type: void
+            Modifiers: public abstract
          METHOD
             Name: func2
             Exceptions->
@@ -167,20 +191,11 @@ SuperClass: class ClassC
             class java.lang.ArithmeticException
             class java.lang.IllegalMonitorStateException
             Parameter types-> 
-            [Ljava.lang.Class;@66a29884
+            java.lang.String
             Return type: int
             Modifiers: public abstract
-         METHOD
-            Name: func1
-            Exceptions->
-            class java.lang.Exception
-            Parameter types-> 
-            [Ljava.lang.Class;@4769b07b
-            [Ljava.lang.Class;@4769b07b
-            [Ljava.lang.Class;@4769b07b
-            [Ljava.lang.Class;@4769b07b
-            Return type: void
-            Modifiers: public abstract
+      FIELDS( interface InterfaceA )
+      Fields-> NONE
    CONSTRUCTORS( class ClassC )
    Constructors->
       CONSTRUCTORS->
@@ -192,8 +207,8 @@ SuperClass: class ClassC
          Name: ClassC
          Exceptions-> NONE
          Parameter types-> 
-         [Ljava.lang.Class;@cc34f4d
-         [Ljava.lang.Class;@cc34f4d
+         int
+         int
          Modifiers: public
    METHODS( class ClassC )
    Methods->
@@ -210,49 +225,54 @@ SuperClass: class ClassC
          Return type: class java.lang.String
          Modifiers: public
       METHOD
+         Name: func3
+         Exceptions-> NONE
+         Parameter types-> 
+         int
+         Return type: void
+         Modifiers: public abstract
+      METHOD
+         Name: func1
+         Exceptions->
+         class java.lang.Exception
+         Parameter types-> 
+         int
+         double
+         boolean
+         java.lang.String
+         Return type: void
+         Modifiers: public
+      METHOD
          Name: func2
          Exceptions->
          class java.lang.Exception
          class java.lang.ArithmeticException
          class java.lang.IllegalMonitorStateException
          Parameter types-> 
-         [Ljava.lang.Class;@17a7cec2
+         java.lang.String
          Return type: int
          Modifiers: public
-      METHOD
-         Name: func3
-         Exceptions-> NONE
-         Parameter types-> 
-         [Ljava.lang.Class;@65b3120a
-         Return type: void
-         Modifiers: public abstract
       METHOD
          Name: func0
          Exceptions->
          class java.lang.Exception
          Parameter types-> 
-         [Ljava.lang.Class;@6f539caf
-         [Ljava.lang.Class;@6f539caf
+         int
+         boolean
          Return type: void
          Modifiers: public
-      METHOD
-         Name: func1
-         Exceptions->
-         class java.lang.Exception
-         Parameter types-> 
-         [Ljava.lang.Class;@79fc0f2f
-         [Ljava.lang.Class;@79fc0f2f
-         [Ljava.lang.Class;@79fc0f2f
-         [Ljava.lang.Class;@79fc0f2f
-         Return type: void
-         Modifiers: public
-INTERFACES( interface java.lang.Runnable )
-Interfaces-> 
-
+   FIELDS( class ClassC )
+   Fields-> NONE
+INTERFACES( class ClassB )
+Interfaces->
+SUPERCLASS -> Recursively Inspect
+interface java.lang.Runnable
    CLASS
    Class: java.lang.Runnable
    SUPERCLASS -> Recursively Inspect
    SuperClass: null
+   INTERFACES( interface java.lang.Runnable )
+   Interfaces-> NONE
    CONSTRUCTORS( interface java.lang.Runnable )
    Constructors-> NONE
    METHODS( interface java.lang.Runnable )
@@ -263,6 +283,8 @@ Interfaces->
          Parameter types-> NONE
          Return type: void
          Modifiers: public abstract
+   FIELDS( interface java.lang.Runnable )
+   Fields-> NONE
 CONSTRUCTORS( class ClassB )
 Constructors->
    CONSTRUCTORS->
@@ -289,7 +311,9 @@ Methods->
       Name: func3
       Exceptions-> NONE
       Parameter types-> 
-      [Ljava.lang.Class;@50040f0c
+      int
       Return type: void
       Modifiers: public
+FIELDS( class ClassB )
+Fields-> NONE
 ======================================================
