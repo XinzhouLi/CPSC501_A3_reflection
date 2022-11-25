@@ -11,6 +11,8 @@ import java.lang.reflect.Modifier;
  */
 public class Inspector {
 
+    private Object obj;
+
     public static void main(String[] args) throws IllegalAccessException {
         String g = "Hello, World!";
         Inspector ins = new Inspector();
@@ -145,20 +147,55 @@ public class Inspector {
 
     private void inspectFields(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
         System.out.println(dent(depth) + "FIELDS( " + c + " )");
-        Field[] fieldsA = c.getFields();
+        Field[] fieldsA = c.getDeclaredFields();
         if (fieldsA.length == 0) {
             System.out.println(dent(depth) + "Fields-> NONE");
         } else {
             System.out.println(dent(depth) + "Fields->");
             for (int i = 0; i < fieldsA.length; i++) {
                 System.out.println(dent(depth + 1) + "FIELD");
+                fieldsA[i].setAccessible(true);
                 Field temp = fieldsA[i];
                 System.out.println(dent(depth + 2) + "Name: " + temp.getName());
                 Class type = temp.getType();
                 System.out.println(dent(depth + 2) + "Type: " + type);
                 int modfi = temp.getModifiers();
                 System.out.println(dent(depth + 2) + "Modifiers: " + Modifier.toString(modfi));
-                Object value = fieldsA[i].get(obj);
+
+                if (temp.getType().isPrimitive()){
+                    if(temp.getType().toString().equals("short")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getShort(obj));
+                    }
+                    else if(temp.getType().toString().equals("int")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getInt(obj));
+                    }
+                    else if(temp.getType().toString().equals("long")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getLong(obj));
+                    }
+                    else if(temp.getType().toString().equals("float")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getFloat(obj));
+                    }
+                    else if(temp.getType().toString().equals("double")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getDouble(obj));
+                    }
+                    else if(temp.getType().toString().equals("byte")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getByte(obj));
+                    }
+                    else if(temp.getType().toString().equals("boolean")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getBoolean(obj));
+                    }
+                    else if(temp.getType().toString().equals("char")){
+                        System.out.println(dent(depth + 2)+" "+" "+"Value:  "+ temp.getChar(obj));
+                    }
+                    else{
+                        System.out.println("No matching primitive type");
+                    }
+
+                }else if(!temp.getType().isPrimitive()){
+                    System.out.println(dent(depth+2)+"Value (ref): "+c+"\n"+dent(depth+3)+ "-> Recursively inspect");
+//                    Object tempobj = temp.get(obj);
+//                    inspectClass(temp.getType(), tempobj, recursive, depth+3);
+                }
             }
         }
     }

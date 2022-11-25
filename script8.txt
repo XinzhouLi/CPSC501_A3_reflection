@@ -1475,7 +1475,3 @@ Methods->
 FIELDS( class java.lang.String )
 Fields->
    FIELD
-      Name: CASE_INSENSITIVE_ORDER
-      Type: interface java.util.Comparator
-      Modifiers: public static final
-======================================================

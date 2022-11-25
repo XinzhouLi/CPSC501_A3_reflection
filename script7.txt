@@ -1,6 +1,6 @@
 ======================================================
 Filename: script7.txt
-Running Test: [LClassB;@506e1b77
+Running Test: [LClassB;@50040f0c
 Recursive: true
 CLASS
 Class: [LClassB;
