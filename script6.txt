@@ -1,0 +1,9 @@
+======================================================
+Filename: script6.txt
+Running Test: [LClassB;@3a71f4dd
+Recursive: true
+[LClassB;
+interface java.lang.Cloneable
+interface java.io.Serializable
+class java.lang.Object
+======================================================

@@ -1,0 +1,21 @@
+======================================================
+Filename: script3.txt
+Running Test: ClassB
+Recursive: true
+ClassB
+interface java.lang.Runnable
+class ClassC
+ClassB
+class java.lang.Exception
+public
+run
+void
+public
+toString
+class java.lang.String
+public
+func3
+int
+void
+public
+======================================================

@@ -1,0 +1,18 @@
+======================================================
+Filename: script5.txt
+Running Test: ClassD
+Recursive: true
+ClassD
+class java.lang.Object
+ClassD
+public
+ClassD
+[Ljava.lang.Class;@4f023edb
+public
+toString
+class java.lang.String
+public
+getVal3
+int
+public
+======================================================

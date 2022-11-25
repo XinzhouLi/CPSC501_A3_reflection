@@ -1,0 +1,31 @@
+======================================================
+Filename: script2.txt
+Running Test: ClassA
+Recursive: true
+ClassA
+interface java.io.Serializable
+interface java.lang.Runnable
+class java.lang.Object
+ClassA
+public
+ClassA
+[Ljava.lang.Class;@a09ee92
+public
+run
+void
+public
+toString
+class java.lang.String
+public
+printSomething
+void
+private
+setVal
+class java.lang.Exception
+int
+void
+public
+getVal
+int
+public
+======================================================

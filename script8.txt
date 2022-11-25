@@ -1,0 +1,751 @@
+======================================================
+Filename: script8.txt
+Running Test: Test String
+Recursive: true
+java.lang.String
+interface java.io.Serializable
+interface java.lang.Comparable
+interface java.lang.CharSequence
+interface java.lang.constant.Constable
+interface java.lang.constant.ConstantDesc
+class java.lang.Object
+java.lang.String
+[Ljava.lang.Class;@5674cd4d
+public
+java.lang.String
+[Ljava.lang.Class;@63961c42
+public
+java.lang.String
+[Ljava.lang.Class;@65b54208
+[Ljava.lang.Class;@65b54208
+[Ljava.lang.Class;@65b54208
+[Ljava.lang.Class;@65b54208
+
+java.lang.String
+[Ljava.lang.Class;@1be6f5c3
+[Ljava.lang.Class;@1be6f5c3
+
+java.lang.String
+[Ljava.lang.Class;@6b884d57
+[Ljava.lang.Class;@6b884d57
+[Ljava.lang.Class;@6b884d57
+[Ljava.lang.Class;@6b884d57
+public
+java.lang.String
+class java.io.UnsupportedEncodingException
+[Ljava.lang.Class;@38af3868
+[Ljava.lang.Class;@38af3868
+public
+java.lang.String
+[Ljava.lang.Class;@77459877
+[Ljava.lang.Class;@77459877
+public
+java.lang.String
+[Ljava.lang.Class;@5b2133b1
+[Ljava.lang.Class;@5b2133b1
+[Ljava.lang.Class;@5b2133b1
+public
+java.lang.String
+[Ljava.lang.Class;@72ea2f77
+public
+java.lang.String
+[Ljava.lang.Class;@33c7353a
+[Ljava.lang.Class;@33c7353a
+
+java.lang.String
+[Ljava.lang.Class;@681a9515
+[Ljava.lang.Class;@681a9515
+[Ljava.lang.Class;@681a9515
+public
+java.lang.String
+[Ljava.lang.Class;@3af49f1c
+public
+java.lang.String
+[Ljava.lang.Class;@19469ea2
+public
+java.lang.String
+public
+java.lang.String
+class java.io.UnsupportedEncodingException
+[Ljava.lang.Class;@13221655
+[Ljava.lang.Class;@13221655
+[Ljava.lang.Class;@13221655
+[Ljava.lang.Class;@13221655
+public
+java.lang.String
+[Ljava.lang.Class;@2f2c9b19
+[Ljava.lang.Class;@2f2c9b19
+public
+java.lang.String
+[Ljava.lang.Class;@31befd9f
+[Ljava.lang.Class;@31befd9f
+[Ljava.lang.Class;@31befd9f
+[Ljava.lang.Class;@31befd9f
+public
+java.lang.String
+[Ljava.lang.Class;@1c20c684
+[Ljava.lang.Class;@1c20c684
+[Ljava.lang.Class;@1c20c684
+public
+value
+class [B
+
+equals
+class java.lang.Object
+boolean
+public
+length
+int
+public
+toString
+class java.lang.String
+public
+hashCode
+int
+public
+getChars
+int
+int
+class [C
+int
+void
+public
+compareTo
+class java.lang.String
+int
+public
+compareTo
+class java.lang.Object
+int
+public volatile
+indexOf
+int
+int
+public
+indexOf
+class java.lang.String
+int
+public
+indexOf
+class [B
+byte
+int
+class java.lang.String
+int
+int
+static
+indexOf
+class java.lang.String
+int
+int
+public
+indexOf
+int
+int
+int
+public
+checkIndex
+int
+int
+void
+static
+valueOf
+int
+class java.lang.String
+public static
+valueOf
+class [C
+class java.lang.String
+public static
+valueOf
+class java.lang.Object
+class java.lang.String
+public static
+valueOf
+boolean
+class java.lang.String
+public static
+valueOf
+class [C
+int
+int
+class java.lang.String
+public static
+valueOf
+char
+class java.lang.String
+public static
+valueOf
+double
+class java.lang.String
+public static
+valueOf
+float
+class java.lang.String
+public static
+valueOf
+long
+class java.lang.String
+public static
+coder
+byte
+
+rangeCheck
+class [C
+int
+int
+class java.lang.Void
+private static
+checkBoundsOffCount
+int
+int
+int
+void
+static
+lookupCharset
+class java.io.UnsupportedEncodingException
+class java.lang.String
+class java.nio.charset.Charset
+private static
+isNotContinuation
+int
+boolean
+private static
+decode2
+int
+int
+char
+private static
+decodeUTF8_UTF16
+class [B
+int
+int
+class [B
+int
+boolean
+int
+private static
+scale
+int
+float
+int
+private static
+decodeWithDecoder
+class java.nio.charset.CharsetDecoder
+class [C
+class [B
+int
+int
+int
+private static
+newStringNoRepl1
+class [B
+class java.nio.charset.Charset
+class java.lang.String
+private static
+newStringUTF8NoRepl
+class [B
+int
+int
+class java.lang.String
+static
+throwMalformed
+int
+int
+void
+private static
+throwMalformed
+class [B
+void
+private static
+encodeUTF8
+byte
+class [B
+boolean
+class [B
+private static
+encode8859_1
+byte
+class [B
+class [B
+private static
+encode8859_1
+byte
+class [B
+boolean
+class [B
+private static
+encodeASCII
+byte
+class [B
+class [B
+private static
+encodeWithEncoder
+class java.nio.charset.Charset
+byte
+class [B
+boolean
+class [B
+private static
+safeTrim
+class [B
+int
+boolean
+class [B
+private static
+encode
+class java.nio.charset.Charset
+byte
+class [B
+class [B
+private static
+getBytesNoRepl1
+class java.lang.String
+class java.nio.charset.Charset
+class [B
+private static
+isASCII
+class [B
+boolean
+private static
+throwUnmappable
+int
+void
+private static
+throwUnmappable
+class [B
+void
+private static
+isMalformed3
+int
+int
+int
+boolean
+private static
+malformed3
+class [B
+int
+int
+private static
+decode3
+int
+int
+int
+char
+private static
+isMalformed3_2
+int
+int
+boolean
+private static
+decode4
+int
+int
+int
+int
+int
+private static
+isMalformed4
+int
+int
+int
+boolean
+private static
+malformed4
+class [B
+int
+int
+private static
+isMalformed4_2
+int
+int
+boolean
+private static
+isMalformed4_3
+int
+boolean
+private static
+encodeUTF8_UTF16
+class [B
+boolean
+class [B
+private static
+isLatin1
+boolean
+
+charAt
+int
+char
+public
+codePointAt
+int
+int
+public
+codePointBefore
+int
+int
+public
+codePointCount
+int
+int
+int
+public
+offsetByCodePoints
+int
+int
+int
+public
+checkBoundsBeginEnd
+int
+int
+int
+void
+static
+getBytes
+class java.nio.charset.Charset
+class [B
+public
+getBytes
+class [B
+int
+byte
+void
+
+getBytes
+class java.io.UnsupportedEncodingException
+class java.lang.String
+class [B
+public
+getBytes
+int
+int
+class [B
+int
+void
+public
+getBytes
+class [B
+int
+int
+byte
+int
+void
+
+getBytes
+class [B
+public
+contentEquals
+interface java.lang.CharSequence
+boolean
+public
+contentEquals
+class java.lang.StringBuffer
+boolean
+public
+nonSyncContentEquals
+class java.lang.AbstractStringBuilder
+boolean
+private
+regionMatches
+boolean
+int
+class java.lang.String
+int
+int
+boolean
+public
+regionMatches
+int
+class java.lang.String
+int
+int
+boolean
+public
+startsWith
+class java.lang.String
+int
+boolean
+public
+startsWith
+class java.lang.String
+boolean
+public
+lastIndexOf
+class java.lang.String
+int
+public
+lastIndexOf
+class [B
+byte
+int
+class java.lang.String
+int
+int
+static
+lastIndexOf
+class java.lang.String
+int
+int
+public
+lastIndexOf
+int
+int
+int
+public
+lastIndexOf
+int
+int
+public
+substring
+int
+int
+class java.lang.String
+public
+substring
+int
+class java.lang.String
+public
+isEmpty
+boolean
+public
+replace
+char
+char
+class java.lang.String
+public
+replace
+interface java.lang.CharSequence
+interface java.lang.CharSequence
+class java.lang.String
+public
+matches
+class java.lang.String
+boolean
+public
+replaceFirst
+class java.lang.String
+class java.lang.String
+class java.lang.String
+public
+replaceAll
+class java.lang.String
+class java.lang.String
+class java.lang.String
+public
+split
+class java.lang.String
+class [Ljava.lang.String;
+public
+split
+class java.lang.String
+int
+class [Ljava.lang.String;
+public
+join
+interface java.lang.CharSequence
+class [Ljava.lang.CharSequence;
+class java.lang.String
+public static transient
+join
+class java.lang.String
+class java.lang.String
+class java.lang.String
+class [Ljava.lang.String;
+int
+class java.lang.String
+static
+join
+interface java.lang.CharSequence
+interface java.lang.Iterable
+class java.lang.String
+public static
+toLowerCase
+class java.lang.String
+public
+toLowerCase
+class java.util.Locale
+class java.lang.String
+public
+toUpperCase
+class java.lang.String
+public
+toUpperCase
+class java.util.Locale
+class java.lang.String
+public
+trim
+class java.lang.String
+public
+strip
+class java.lang.String
+public
+stripLeading
+class java.lang.String
+public
+stripTrailing
+class java.lang.String
+public
+indexOfNonWhitespace
+int
+private
+lines
+interface java.util.stream.Stream
+public
+repeat
+int
+class java.lang.String
+public
+lastIndexOfNonWhitespace
+int
+private
+outdent
+interface java.util.List
+int
+private static
+isBlank
+boolean
+public
+toCharArray
+class [C
+public
+format
+class java.lang.String
+class [Ljava.lang.Object;
+class java.lang.String
+public static transient
+format
+class java.util.Locale
+class java.lang.String
+class [Ljava.lang.Object;
+class java.lang.String
+public static transient
+resolveConstantDesc
+class java.lang.ReflectiveOperationException
+class java.lang.invoke.MethodHandles$Lookup
+class java.lang.Object
+public volatile
+resolveConstantDesc
+class java.lang.invoke.MethodHandles$Lookup
+class java.lang.String
+public
+codePoints
+interface java.util.stream.IntStream
+public
+newStringNoRepl
+class java.nio.charset.CharacterCodingException
+class [B
+class java.nio.charset.Charset
+class java.lang.String
+static
+getBytesUTF8NoRepl
+class java.lang.String
+class [B
+static
+getBytesNoRepl
+class java.nio.charset.CharacterCodingException
+class java.lang.String
+class java.nio.charset.Charset
+class [B
+static
+decodeASCII
+class [B
+int
+class [C
+int
+int
+int
+static
+equalsIgnoreCase
+class java.lang.String
+boolean
+public
+compareToIgnoreCase
+class java.lang.String
+int
+public
+endsWith
+class java.lang.String
+boolean
+public
+subSequence
+int
+int
+interface java.lang.CharSequence
+public
+concat
+class java.lang.String
+class java.lang.String
+public
+contains
+interface java.lang.CharSequence
+boolean
+public
+indent
+int
+class java.lang.String
+public
+stripIndent
+class java.lang.String
+public
+translateEscapes
+class java.lang.String
+public
+chars
+interface java.util.stream.IntStream
+public
+transform
+interface java.util.function.Function
+class java.lang.Object
+public
+formatted
+class [Ljava.lang.Object;
+class java.lang.String
+public transient
+copyValueOf
+class [C
+int
+int
+class java.lang.String
+public static
+copyValueOf
+class [C
+class java.lang.String
+public static
+intern
+class java.lang.String
+public native
+checkOffset
+int
+int
+void
+static
+valueOfCodePoint
+int
+class java.lang.String
+static
+describeConstable
+class java.util.Optional
+public
+lambda$stripIndent$3
+int
+class java.lang.String
+class java.lang.String
+private static
+lambda$indent$2
+int
+class java.lang.String
+class java.lang.String
+private static
+lambda$indent$1
+class java.lang.String
+class java.lang.String
+private static
+lambda$indent$0
+class java.lang.String
+class java.lang.String
+class java.lang.String
+private static
+CASE_INSENSITIVE_ORDER
+interface java.util.Comparator
+public static final
+======================================================
