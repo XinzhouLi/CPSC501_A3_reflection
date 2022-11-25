@@ -1,71 +1,123 @@
 ======================================================
 Filename: script6.txt
-Running Test: [LClassB;@19469ea2
+Running Test: [LClassB;@7c3df479
 Recursive: true
 CLASS
 Class: [LClassB;
 SUPERCLASS -> Recursively Inspect
-class java.lang.Object
+SuperClass: class java.lang.Object
    CLASS
    Class: java.lang.Object
    SUPERCLASS -> Recursively Inspect
-   null
-   java.lang.Object
-   public
-   finalize
-   class java.lang.Throwable
-   void
-   protected
-   wait
-   class java.lang.InterruptedException
-   long
-   int
-   void
-   public final
-   wait
-   class java.lang.InterruptedException
-   void
-   public final
-   wait
-   class java.lang.InterruptedException
-   long
-   void
-   public final native
-   equals
-   class java.lang.Object
-   boolean
-   public
-   toString
-   class java.lang.String
-   public
-   hashCode
-   int
-   public native
-   getClass
-   class java.lang.Class
-   public final native
-   clone
-   class java.lang.CloneNotSupportedException
-   class java.lang.Object
-   protected native
-   notify
-   void
-   public final native
-   notifyAll
-   void
-   public final native
+   SuperClass: null
+   CONSTRUCTORS( class java.lang.Object )
+   Constructors->
+      CONSTRUCTORS->
+         Name: java.lang.Object
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Modifiers: public
+   METHODS( class java.lang.Object )
+   Methods->
+      METHOD
+         Name: finalize
+         Exceptions->
+         class java.lang.Throwable
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: protected
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> 
+         [Ljava.lang.Class;@7106e68e
+         [Ljava.lang.Class;@7106e68e
+         Return type: void
+         Modifiers: public final
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> 
+         [Ljava.lang.Class;@7eda2dbb
+         Return type: void
+         Modifiers: public final native
+      METHOD
+         Name: equals
+         Exceptions-> NONE
+         Parameter types-> 
+         [Ljava.lang.Class;@6576fe71
+         Return type: boolean
+         Modifiers: public
+      METHOD
+         Name: toString
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.String
+         Modifiers: public
+      METHOD
+         Name: hashCode
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: int
+         Modifiers: public native
+      METHOD
+         Name: getClass
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.Class
+         Modifiers: public final native
+      METHOD
+         Name: clone
+         Exceptions->
+         class java.lang.CloneNotSupportedException
+         Parameter types-> NONE
+         Return type: class java.lang.Object
+         Modifiers: protected native
+      METHOD
+         Name: notify
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final native
+      METHOD
+         Name: notifyAll
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final native
 INTERFACES( interface java.lang.Cloneable )
 Interfaces-> 
 
    CLASS
    Class: java.lang.Cloneable
    SUPERCLASS -> Recursively Inspect
-   null
+   SuperClass: null
+   CONSTRUCTORS( interface java.lang.Cloneable )
+   Constructors-> NONE
+   METHODS( interface java.lang.Cloneable )
+   Methods-> NONE
 INTERFACES( interface java.io.Serializable )
 Interfaces-> 
 
    CLASS
    Class: java.io.Serializable
    SUPERCLASS -> Recursively Inspect
-   null
+   SuperClass: null
+   CONSTRUCTORS( interface java.io.Serializable )
+   Constructors-> NONE
+   METHODS( interface java.io.Serializable )
+   Methods-> NONE
+CONSTRUCTORS( class [LClassB; )
+Constructors-> NONE
+METHODS( class [LClassB; )
+Methods-> NONE
 ======================================================

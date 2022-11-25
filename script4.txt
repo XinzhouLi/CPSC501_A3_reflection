@@ -5,64 +5,120 @@ Recursive: true
 CLASS
 Class: ClassD
 SUPERCLASS -> Recursively Inspect
-class java.lang.Object
+SuperClass: class java.lang.Object
    CLASS
    Class: java.lang.Object
    SUPERCLASS -> Recursively Inspect
-   null
-   java.lang.Object
-   public
-   finalize
-   class java.lang.Throwable
-   void
-   protected
-   wait
-   class java.lang.InterruptedException
-   long
-   int
-   void
-   public final
-   wait
-   class java.lang.InterruptedException
-   void
-   public final
-   wait
-   class java.lang.InterruptedException
-   long
-   void
-   public final native
-   equals
-   class java.lang.Object
-   boolean
-   public
-   toString
-   class java.lang.String
-   public
-   hashCode
-   int
-   public native
-   getClass
-   class java.lang.Class
-   public final native
-   clone
-   class java.lang.CloneNotSupportedException
-   class java.lang.Object
-   protected native
-   notify
-   void
-   public final native
-   notifyAll
-   void
-   public final native
-ClassD
-public
-ClassD
-[Ljava.lang.Class;@681a9515
-public
-toString
-class java.lang.String
-public
-getVal3
-int
-public
+   SuperClass: null
+   CONSTRUCTORS( class java.lang.Object )
+   Constructors->
+      CONSTRUCTORS->
+         Name: java.lang.Object
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Modifiers: public
+   METHODS( class java.lang.Object )
+   Methods->
+      METHOD
+         Name: finalize
+         Exceptions->
+         class java.lang.Throwable
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: protected
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> 
+         [Ljava.lang.Class;@2dda6444
+         [Ljava.lang.Class;@2dda6444
+         Return type: void
+         Modifiers: public final
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> 
+         [Ljava.lang.Class;@5e9f23b4
+         Return type: void
+         Modifiers: public final native
+      METHOD
+         Name: equals
+         Exceptions-> NONE
+         Parameter types-> 
+         [Ljava.lang.Class;@4783da3f
+         Return type: boolean
+         Modifiers: public
+      METHOD
+         Name: toString
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.String
+         Modifiers: public
+      METHOD
+         Name: hashCode
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: int
+         Modifiers: public native
+      METHOD
+         Name: getClass
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.Class
+         Modifiers: public final native
+      METHOD
+         Name: clone
+         Exceptions->
+         class java.lang.CloneNotSupportedException
+         Parameter types-> NONE
+         Return type: class java.lang.Object
+         Modifiers: protected native
+      METHOD
+         Name: notify
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final native
+      METHOD
+         Name: notifyAll
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final native
+CONSTRUCTORS( class ClassD )
+Constructors->
+   CONSTRUCTORS->
+      Name: ClassD
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Modifiers: public
+   CONSTRUCTORS->
+      Name: ClassD
+      Exceptions-> NONE
+      Parameter types-> 
+      [Ljava.lang.Class;@378fd1ac
+      Modifiers: public
+METHODS( class ClassD )
+Methods->
+   METHOD
+      Name: toString
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: class java.lang.String
+      Modifiers: public
+   METHOD
+      Name: getVal3
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: int
+      Modifiers: public
 ======================================================

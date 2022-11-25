@@ -5,167 +5,291 @@ Recursive: true
 CLASS
 Class: ClassB
 SUPERCLASS -> Recursively Inspect
-class ClassC
+SuperClass: class ClassC
    CLASS
    Class: ClassC
    SUPERCLASS -> Recursively Inspect
-   class ClassD
+   SuperClass: class ClassD
       CLASS
       Class: ClassD
       SUPERCLASS -> Recursively Inspect
-      class java.lang.Object
+      SuperClass: class java.lang.Object
          CLASS
          Class: java.lang.Object
          SUPERCLASS -> Recursively Inspect
-         null
-         java.lang.Object
-         public
-         finalize
-         class java.lang.Throwable
-         void
-         protected
-         wait
-         class java.lang.InterruptedException
-         long
-         int
-         void
-         public final
-         wait
-         class java.lang.InterruptedException
-         void
-         public final
-         wait
-         class java.lang.InterruptedException
-         long
-         void
-         public final native
-         equals
-         class java.lang.Object
-         boolean
-         public
-         toString
-         class java.lang.String
-         public
-         hashCode
-         int
-         public native
-         getClass
-         class java.lang.Class
-         public final native
-         clone
-         class java.lang.CloneNotSupportedException
-         class java.lang.Object
-         protected native
-         notify
-         void
-         public final native
-         notifyAll
-         void
-         public final native
-      ClassD
-      public
-      ClassD
-      [Ljava.lang.Class;@72ea2f77
-      public
-      toString
-      class java.lang.String
-      public
-      getVal3
-      int
-      public
+         SuperClass: null
+         CONSTRUCTORS( class java.lang.Object )
+         Constructors->
+            CONSTRUCTORS->
+               Name: java.lang.Object
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Modifiers: public
+         METHODS( class java.lang.Object )
+         Methods->
+            METHOD
+               Name: finalize
+               Exceptions->
+               class java.lang.Throwable
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: protected
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               [Ljava.lang.Class;@30dae81
+               [Ljava.lang.Class;@30dae81
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               [Ljava.lang.Class;@1b2c6ec2
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: equals
+               Exceptions-> NONE
+               Parameter types-> 
+               [Ljava.lang.Class;@4edde6e5
+               Return type: boolean
+               Modifiers: public
+            METHOD
+               Name: toString
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.String
+               Modifiers: public
+            METHOD
+               Name: hashCode
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: int
+               Modifiers: public native
+            METHOD
+               Name: getClass
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.Class
+               Modifiers: public final native
+            METHOD
+               Name: clone
+               Exceptions->
+               class java.lang.CloneNotSupportedException
+               Parameter types-> NONE
+               Return type: class java.lang.Object
+               Modifiers: protected native
+            METHOD
+               Name: notify
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: notifyAll
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+      CONSTRUCTORS( class ClassD )
+      Constructors->
+         CONSTRUCTORS->
+            Name: ClassD
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Modifiers: public
+         CONSTRUCTORS->
+            Name: ClassD
+            Exceptions-> NONE
+            Parameter types-> 
+            [Ljava.lang.Class;@70177ecd
+            Modifiers: public
+      METHODS( class ClassD )
+      Methods->
+         METHOD
+            Name: toString
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: class java.lang.String
+            Modifiers: public
+         METHOD
+            Name: getVal3
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: int
+            Modifiers: public
    INTERFACES( interface InterfaceA )
    Interfaces-> 
 
       CLASS
       Class: InterfaceA
       SUPERCLASS -> Recursively Inspect
-      null
+      SuperClass: null
       INTERFACES( interface InterfaceB )
       Interfaces-> 
 
          CLASS
          Class: InterfaceB
          SUPERCLASS -> Recursively Inspect
-         null
-         func0
+         SuperClass: null
+         CONSTRUCTORS( interface InterfaceB )
+         Constructors-> NONE
+         METHODS( interface InterfaceB )
+         Methods->
+            METHOD
+               Name: func0
+               Exceptions->
+               class java.lang.Exception
+               Parameter types-> 
+               [Ljava.lang.Class;@1e80bfe8
+               [Ljava.lang.Class;@1e80bfe8
+               Return type: void
+               Modifiers: public abstract
+      CONSTRUCTORS( interface InterfaceA )
+      Constructors-> NONE
+      METHODS( interface InterfaceA )
+      Methods->
+         METHOD
+            Name: func2
+            Exceptions->
+            class java.lang.Exception
+            class java.lang.ArithmeticException
+            class java.lang.IllegalMonitorStateException
+            Parameter types-> 
+            [Ljava.lang.Class;@66a29884
+            Return type: int
+            Modifiers: public abstract
+         METHOD
+            Name: func1
+            Exceptions->
+            class java.lang.Exception
+            Parameter types-> 
+            [Ljava.lang.Class;@4769b07b
+            [Ljava.lang.Class;@4769b07b
+            [Ljava.lang.Class;@4769b07b
+            [Ljava.lang.Class;@4769b07b
+            Return type: void
+            Modifiers: public abstract
+   CONSTRUCTORS( class ClassC )
+   Constructors->
+      CONSTRUCTORS->
+         Name: ClassC
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Modifiers: public
+      CONSTRUCTORS->
+         Name: ClassC
+         Exceptions-> NONE
+         Parameter types-> 
+         [Ljava.lang.Class;@cc34f4d
+         [Ljava.lang.Class;@cc34f4d
+         Modifiers: public
+   METHODS( class ClassC )
+   Methods->
+      METHOD
+         Name: run
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public
+      METHOD
+         Name: toString
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.String
+         Modifiers: public
+      METHOD
+         Name: func2
+         Exceptions->
          class java.lang.Exception
-         int
-         boolean
-         void
-         public abstract
-      func1
-      class java.lang.Exception
-      int
-      double
-      boolean
-      class java.lang.String
-      void
-      public abstract
-      func2
-      class java.lang.Exception
-      class java.lang.ArithmeticException
-      class java.lang.IllegalMonitorStateException
-      class java.lang.String
-      int
-      public abstract
-   ClassC
-   public
-   ClassC
-   [Ljava.lang.Class;@33c7353a
-   [Ljava.lang.Class;@33c7353a
-   public
-   run
-   void
-   public
-   toString
-   class java.lang.String
-   public
-   func3
-   int
-   void
-   public abstract
-   func0
-   class java.lang.Exception
-   int
-   boolean
-   void
-   public
-   func1
-   class java.lang.Exception
-   int
-   double
-   boolean
-   class java.lang.String
-   void
-   public
-   func2
-   class java.lang.Exception
-   class java.lang.ArithmeticException
-   class java.lang.IllegalMonitorStateException
-   class java.lang.String
-   int
-   public
+         class java.lang.ArithmeticException
+         class java.lang.IllegalMonitorStateException
+         Parameter types-> 
+         [Ljava.lang.Class;@17a7cec2
+         Return type: int
+         Modifiers: public
+      METHOD
+         Name: func3
+         Exceptions-> NONE
+         Parameter types-> 
+         [Ljava.lang.Class;@65b3120a
+         Return type: void
+         Modifiers: public abstract
+      METHOD
+         Name: func0
+         Exceptions->
+         class java.lang.Exception
+         Parameter types-> 
+         [Ljava.lang.Class;@6f539caf
+         [Ljava.lang.Class;@6f539caf
+         Return type: void
+         Modifiers: public
+      METHOD
+         Name: func1
+         Exceptions->
+         class java.lang.Exception
+         Parameter types-> 
+         [Ljava.lang.Class;@79fc0f2f
+         [Ljava.lang.Class;@79fc0f2f
+         [Ljava.lang.Class;@79fc0f2f
+         [Ljava.lang.Class;@79fc0f2f
+         Return type: void
+         Modifiers: public
 INTERFACES( interface java.lang.Runnable )
 Interfaces-> 
 
    CLASS
    Class: java.lang.Runnable
    SUPERCLASS -> Recursively Inspect
-   null
-   run
-   void
-   public abstract
-ClassB
-class java.lang.Exception
-public
-run
-void
-public
-toString
-class java.lang.String
-public
-func3
-int
-void
-public
+   SuperClass: null
+   CONSTRUCTORS( interface java.lang.Runnable )
+   Constructors-> NONE
+   METHODS( interface java.lang.Runnable )
+   Methods->
+      METHOD
+         Name: run
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public abstract
+CONSTRUCTORS( class ClassB )
+Constructors->
+   CONSTRUCTORS->
+      Name: ClassB
+      Exceptions->
+      class java.lang.Exception
+      Parameter types-> NONE
+      Modifiers: public
+METHODS( class ClassB )
+Methods->
+   METHOD
+      Name: run
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: void
+      Modifiers: public
+   METHOD
+      Name: toString
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: class java.lang.String
+      Modifiers: public
+   METHOD
+      Name: func3
+      Exceptions-> NONE
+      Parameter types-> 
+      [Ljava.lang.Class;@50040f0c
+      Return type: void
+      Modifiers: public
 ======================================================
