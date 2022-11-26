@@ -1,7 +1,139 @@
 ======================================================
 Filename: script7.txt
-Running Test: [LClassB;@3d494fbf
+Running Test: [LClassB;@4f3f5b24
 Recursive: true
-0FIELDS( class [LClassB; )
-0Fields->None
+CLASS
+Class: [LClassB;
+SUPERCLASS -> Recursively Inspect
+SuperClass: class java.lang.Object
+0
+   CLASS
+   Class: java.lang.Object
+   SuperClass: NONE
+   INTERFACES( class java.lang.Object )
+   Interfaces-> NONE
+   CONSTRUCTORS( class java.lang.Object )
+   Constructors->
+      CONSTRUCTORS->
+         Name: java.lang.Object
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Modifiers: public
+   METHODS( class java.lang.Object )
+   Methods->
+      METHOD
+         Name: finalize
+         Exceptions->
+         class java.lang.Throwable
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: protected
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> 
+         long
+         int
+         Return type: void
+         Modifiers: public final
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final
+      METHOD
+         Name: wait
+         Exceptions->
+         class java.lang.InterruptedException
+         Parameter types-> 
+         long
+         Return type: void
+         Modifiers: public final native
+      METHOD
+         Name: equals
+         Exceptions-> NONE
+         Parameter types-> 
+         java.lang.Object
+         Return type: boolean
+         Modifiers: public
+      METHOD
+         Name: toString
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.String
+         Modifiers: public
+      METHOD
+         Name: hashCode
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: int
+         Modifiers: public native
+      METHOD
+         Name: getClass
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.Class
+         Modifiers: public final native
+      METHOD
+         Name: clone
+         Exceptions->
+         class java.lang.CloneNotSupportedException
+         Parameter types-> NONE
+         Return type: class java.lang.Object
+         Modifiers: protected native
+      METHOD
+         Name: notify
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final native
+      METHOD
+         Name: notifyAll
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public final native
+   FIELDS( class java.lang.Object )
+   Fields: NONE
+INTERFACES( class [LClassB; )
+Interfaces->
+SUPERCLASS -> Recursively Inspect
+interface java.lang.Cloneable
+   CLASS
+   Class: java.lang.Cloneable
+   SUPERCLASS -> Recursively Inspect
+   SuperClass: null
+1
+   INTERFACES( interface java.lang.Cloneable )
+   Interfaces-> NONE
+   CONSTRUCTORS( interface java.lang.Cloneable )
+   Constructors-> NONE
+   METHODS( interface java.lang.Cloneable )
+   Methods-> NONE
+   FIELDS( interface java.lang.Cloneable )
+   Fields: NONE
+SUPERCLASS -> Recursively Inspect
+interface java.io.Serializable
+   CLASS
+   Class: java.io.Serializable
+   SUPERCLASS -> Recursively Inspect
+   SuperClass: null
+1
+   INTERFACES( interface java.io.Serializable )
+   Interfaces-> NONE
+   CONSTRUCTORS( interface java.io.Serializable )
+   Constructors-> NONE
+   METHODS( interface java.io.Serializable )
+   Methods-> NONE
+   FIELDS( interface java.io.Serializable )
+   Fields: NONE
+CONSTRUCTORS( class [LClassB; )
+Constructors-> NONE
+METHODS( class [LClassB; )
+Methods-> NONE
+FIELDS( class [LClassB; )
+Fields: NONE
 ======================================================

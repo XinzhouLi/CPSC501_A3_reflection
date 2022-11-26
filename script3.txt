@@ -2,24 +2,1705 @@
 Filename: script3.txt
 Running Test: ClassB
 Recursive: true
-0FIELDS( class ClassB )
-0Fields->
-0 FIELD
-private
-0  Name:  val
-0  Type:  class ClassA
-0  Modifiers:  private
-0  Value:  ClassA
-0 FIELD
-private
-0  Name:  val2
-0  Type:  class ClassA
-0  Modifiers:  private
-0  Value:  ClassA
-0 FIELD
-private
-0  Name:  val3
-0  Type:  class ClassA
-0  Modifiers:  private
-0  Value:  null
+CLASS
+Class: ClassB
+SUPERCLASS -> Recursively Inspect
+SuperClass: class ClassC
+0
+   CLASS
+   Class: ClassC
+   SUPERCLASS -> Recursively Inspect
+   SuperClass: class ClassD
+1
+      CLASS
+      Class: ClassD
+      SUPERCLASS -> Recursively Inspect
+      SuperClass: class java.lang.Object
+2
+         CLASS
+         Class: java.lang.Object
+         SuperClass: NONE
+         INTERFACES( class java.lang.Object )
+         Interfaces-> NONE
+         CONSTRUCTORS( class java.lang.Object )
+         Constructors->
+            CONSTRUCTORS->
+               Name: java.lang.Object
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Modifiers: public
+         METHODS( class java.lang.Object )
+         Methods->
+            METHOD
+               Name: finalize
+               Exceptions->
+               class java.lang.Throwable
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: protected
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               long
+               int
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               long
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: equals
+               Exceptions-> NONE
+               Parameter types-> 
+               java.lang.Object
+               Return type: boolean
+               Modifiers: public
+            METHOD
+               Name: toString
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.String
+               Modifiers: public
+            METHOD
+               Name: hashCode
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: int
+               Modifiers: public native
+            METHOD
+               Name: getClass
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.Class
+               Modifiers: public final native
+            METHOD
+               Name: clone
+               Exceptions->
+               class java.lang.CloneNotSupportedException
+               Parameter types-> NONE
+               Return type: class java.lang.Object
+               Modifiers: protected native
+            METHOD
+               Name: notify
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: notifyAll
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+         FIELDS( class java.lang.Object )
+         Fields: NONE
+      INTERFACES( class ClassD )
+      Interfaces-> NONE
+      CONSTRUCTORS( class ClassD )
+      Constructors->
+         CONSTRUCTORS->
+            Name: ClassD
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Modifiers: public
+         CONSTRUCTORS->
+            Name: ClassD
+            Exceptions-> NONE
+            Parameter types-> 
+            int
+            Modifiers: public
+      METHODS( class ClassD )
+      Methods->
+         METHOD
+            Name: toString
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: class java.lang.String
+            Modifiers: public
+         METHOD
+            Name: getVal3
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: int
+            Modifiers: public
+      FIELDS( class ClassD )
+      Fields-> 
+         FIELD
+         Name: val
+         Type: class ClassA
+         Modifiers: private
+         Value: ClassA
+            -> Recursively inspect
+            CLASS
+            Class: ClassA
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: class java.lang.Object
+4
+               CLASS
+               Class: java.lang.Object
+               SuperClass: NONE
+               INTERFACES( class java.lang.Object )
+               Interfaces-> NONE
+               CONSTRUCTORS( class java.lang.Object )
+               Constructors->
+                  CONSTRUCTORS->
+                     Name: java.lang.Object
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Modifiers: public
+               METHODS( class java.lang.Object )
+               Methods->
+                  METHOD
+                     Name: finalize
+                     Exceptions->
+                     class java.lang.Throwable
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: protected
+                  METHOD
+                     Name: wait
+                     Exceptions->
+                     class java.lang.InterruptedException
+                     Parameter types-> 
+                     long
+                     int
+                     Return type: void
+                     Modifiers: public final
+                  METHOD
+                     Name: wait
+                     Exceptions->
+                     class java.lang.InterruptedException
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: public final
+                  METHOD
+                     Name: wait
+                     Exceptions->
+                     class java.lang.InterruptedException
+                     Parameter types-> 
+                     long
+                     Return type: void
+                     Modifiers: public final native
+                  METHOD
+                     Name: equals
+                     Exceptions-> NONE
+                     Parameter types-> 
+                     java.lang.Object
+                     Return type: boolean
+                     Modifiers: public
+                  METHOD
+                     Name: toString
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: class java.lang.String
+                     Modifiers: public
+                  METHOD
+                     Name: hashCode
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: int
+                     Modifiers: public native
+                  METHOD
+                     Name: getClass
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: class java.lang.Class
+                     Modifiers: public final native
+                  METHOD
+                     Name: clone
+                     Exceptions->
+                     class java.lang.CloneNotSupportedException
+                     Parameter types-> NONE
+                     Return type: class java.lang.Object
+                     Modifiers: protected native
+                  METHOD
+                     Name: notify
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: public final native
+                  METHOD
+                     Name: notifyAll
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: public final native
+               FIELDS( class java.lang.Object )
+               Fields: NONE
+            INTERFACES( class ClassA )
+            Interfaces->
+            SUPERCLASS -> Recursively Inspect
+            interface java.io.Serializable
+               CLASS
+               Class: java.io.Serializable
+               SUPERCLASS -> Recursively Inspect
+               SuperClass: null
+5
+               INTERFACES( interface java.io.Serializable )
+               Interfaces-> NONE
+               CONSTRUCTORS( interface java.io.Serializable )
+               Constructors-> NONE
+               METHODS( interface java.io.Serializable )
+               Methods-> NONE
+               FIELDS( interface java.io.Serializable )
+               Fields: NONE
+            SUPERCLASS -> Recursively Inspect
+            interface java.lang.Runnable
+               CLASS
+               Class: java.lang.Runnable
+               SUPERCLASS -> Recursively Inspect
+               SuperClass: null
+5
+               INTERFACES( interface java.lang.Runnable )
+               Interfaces-> NONE
+               CONSTRUCTORS( interface java.lang.Runnable )
+               Constructors-> NONE
+               METHODS( interface java.lang.Runnable )
+               Methods->
+                  METHOD
+                     Name: run
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: public abstract
+               FIELDS( interface java.lang.Runnable )
+               Fields: NONE
+            CONSTRUCTORS( class ClassA )
+            Constructors->
+               CONSTRUCTORS->
+                  Name: ClassA
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Modifiers: public
+               CONSTRUCTORS->
+                  Name: ClassA
+                  Exceptions-> NONE
+                  Parameter types-> 
+                  int
+                  Modifiers: public
+            METHODS( class ClassA )
+            Methods->
+               METHOD
+                  Name: run
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public
+               METHOD
+                  Name: toString
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: class java.lang.String
+                  Modifiers: public
+               METHOD
+                  Name: printSomething
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: private
+               METHOD
+                  Name: setVal
+                  Exceptions->
+                  class java.lang.Exception
+                  Parameter types-> 
+                  int
+                  Return type: void
+                  Modifiers: public
+               METHOD
+                  Name: getVal
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: int
+                  Modifiers: public
+            FIELDS( class ClassA )
+            Fields-> 
+               FIELD
+               Name: val
+               Type: int
+               Modifiers: private
+               Value:  17
+               FIELD
+               Name: val2
+               Type: double
+               Modifiers: private
+               Value:  0.2
+               FIELD
+               Name: val3
+               Type: boolean
+               Modifiers: private
+               Value:  true
+         FIELD
+         Name: val2
+         Type: class ClassA
+         Modifiers: private static
+         Value: null
+            -> Recursively inspect
+         FIELD
+         Name: val3
+         Type: int
+         Modifiers: private
+         Value:  34
+         FIELD
+         Name: vallarray
+         Type: class [LClassA;
+         Modifiers: private
+         Value: [LClassA;@378bf509
+            -> Recursively inspect
+            CLASS
+            Class: [LClassA;
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: class java.lang.Object
+4
+               CLASS
+               Class: java.lang.Object
+               SuperClass: NONE
+               INTERFACES( class java.lang.Object )
+               Interfaces-> NONE
+               CONSTRUCTORS( class java.lang.Object )
+               Constructors->
+                  CONSTRUCTORS->
+                     Name: java.lang.Object
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Modifiers: public
+               METHODS( class java.lang.Object )
+               Methods->
+                  METHOD
+                     Name: finalize
+                     Exceptions->
+                     class java.lang.Throwable
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: protected
+                  METHOD
+                     Name: wait
+                     Exceptions->
+                     class java.lang.InterruptedException
+                     Parameter types-> 
+                     long
+                     int
+                     Return type: void
+                     Modifiers: public final
+                  METHOD
+                     Name: wait
+                     Exceptions->
+                     class java.lang.InterruptedException
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: public final
+                  METHOD
+                     Name: wait
+                     Exceptions->
+                     class java.lang.InterruptedException
+                     Parameter types-> 
+                     long
+                     Return type: void
+                     Modifiers: public final native
+                  METHOD
+                     Name: equals
+                     Exceptions-> NONE
+                     Parameter types-> 
+                     java.lang.Object
+                     Return type: boolean
+                     Modifiers: public
+                  METHOD
+                     Name: toString
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: class java.lang.String
+                     Modifiers: public
+                  METHOD
+                     Name: hashCode
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: int
+                     Modifiers: public native
+                  METHOD
+                     Name: getClass
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: class java.lang.Class
+                     Modifiers: public final native
+                  METHOD
+                     Name: clone
+                     Exceptions->
+                     class java.lang.CloneNotSupportedException
+                     Parameter types-> NONE
+                     Return type: class java.lang.Object
+                     Modifiers: protected native
+                  METHOD
+                     Name: notify
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: public final native
+                  METHOD
+                     Name: notifyAll
+                     Exceptions-> NONE
+                     Parameter types-> NONE
+                     Return type: void
+                     Modifiers: public final native
+               FIELDS( class java.lang.Object )
+               Fields: NONE
+            INTERFACES( class [LClassA; )
+            Interfaces->
+            SUPERCLASS -> Recursively Inspect
+            interface java.lang.Cloneable
+               CLASS
+               Class: java.lang.Cloneable
+               SUPERCLASS -> Recursively Inspect
+               SuperClass: null
+5
+               INTERFACES( interface java.lang.Cloneable )
+               Interfaces-> NONE
+               CONSTRUCTORS( interface java.lang.Cloneable )
+               Constructors-> NONE
+               METHODS( interface java.lang.Cloneable )
+               Methods-> NONE
+               FIELDS( interface java.lang.Cloneable )
+               Fields: NONE
+            SUPERCLASS -> Recursively Inspect
+            interface java.io.Serializable
+               CLASS
+               Class: java.io.Serializable
+               SUPERCLASS -> Recursively Inspect
+               SuperClass: null
+5
+               INTERFACES( interface java.io.Serializable )
+               Interfaces-> NONE
+               CONSTRUCTORS( interface java.io.Serializable )
+               Constructors-> NONE
+               METHODS( interface java.io.Serializable )
+               Methods-> NONE
+               FIELDS( interface java.io.Serializable )
+               Fields: NONE
+            CONSTRUCTORS( class [LClassA; )
+            Constructors-> NONE
+            METHODS( class [LClassA; )
+            Methods-> NONE
+            FIELDS( class [LClassA; )
+            Fields: NONE
+   INTERFACES( class ClassC )
+   Interfaces->
+   SUPERCLASS -> Recursively Inspect
+   interface InterfaceA
+      CLASS
+      Class: InterfaceA
+      SUPERCLASS -> Recursively Inspect
+      SuperClass: null
+2
+      INTERFACES( interface InterfaceA )
+      Interfaces->
+      SUPERCLASS -> Recursively Inspect
+      interface InterfaceB
+         CLASS
+         Class: InterfaceB
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: null
+3
+         INTERFACES( interface InterfaceB )
+         Interfaces-> NONE
+         CONSTRUCTORS( interface InterfaceB )
+         Constructors-> NONE
+         METHODS( interface InterfaceB )
+         Methods->
+            METHOD
+               Name: func0
+               Exceptions->
+               class java.lang.Exception
+               Parameter types-> 
+               int
+               boolean
+               Return type: void
+               Modifiers: public abstract
+         FIELDS( interface InterfaceB )
+         Fields: NONE
+      CONSTRUCTORS( interface InterfaceA )
+      Constructors-> NONE
+      METHODS( interface InterfaceA )
+      Methods->
+         METHOD
+            Name: func1
+            Exceptions->
+            class java.lang.Exception
+            Parameter types-> 
+            int
+            double
+            boolean
+            java.lang.String
+            Return type: void
+            Modifiers: public abstract
+         METHOD
+            Name: func2
+            Exceptions->
+            class java.lang.Exception
+            class java.lang.ArithmeticException
+            class java.lang.IllegalMonitorStateException
+            Parameter types-> 
+            java.lang.String
+            Return type: int
+            Modifiers: public abstract
+      FIELDS( interface InterfaceA )
+      Fields: NONE
+   CONSTRUCTORS( class ClassC )
+   Constructors->
+      CONSTRUCTORS->
+         Name: ClassC
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Modifiers: public
+      CONSTRUCTORS->
+         Name: ClassC
+         Exceptions-> NONE
+         Parameter types-> 
+         int
+         int
+         Modifiers: public
+   METHODS( class ClassC )
+   Methods->
+      METHOD
+         Name: run
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public
+      METHOD
+         Name: toString
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.String
+         Modifiers: public
+      METHOD
+         Name: func3
+         Exceptions-> NONE
+         Parameter types-> 
+         int
+         Return type: void
+         Modifiers: public abstract
+      METHOD
+         Name: func0
+         Exceptions->
+         class java.lang.Exception
+         Parameter types-> 
+         int
+         boolean
+         Return type: void
+         Modifiers: public
+      METHOD
+         Name: func1
+         Exceptions->
+         class java.lang.Exception
+         Parameter types-> 
+         int
+         double
+         boolean
+         java.lang.String
+         Return type: void
+         Modifiers: public
+      METHOD
+         Name: func2
+         Exceptions->
+         class java.lang.Exception
+         class java.lang.ArithmeticException
+         class java.lang.IllegalMonitorStateException
+         Parameter types-> 
+         java.lang.String
+         Return type: int
+         Modifiers: public
+   FIELDS( class ClassC )
+   Fields-> 
+      FIELD
+      Name: val2
+      Type: class ClassA
+      Modifiers: private
+      Value: ClassA
+         -> Recursively inspect
+         CLASS
+         Class: ClassA
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: class java.lang.Object
+3
+            CLASS
+            Class: java.lang.Object
+            SuperClass: NONE
+            INTERFACES( class java.lang.Object )
+            Interfaces-> NONE
+            CONSTRUCTORS( class java.lang.Object )
+            Constructors->
+               CONSTRUCTORS->
+                  Name: java.lang.Object
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Modifiers: public
+            METHODS( class java.lang.Object )
+            Methods->
+               METHOD
+                  Name: finalize
+                  Exceptions->
+                  class java.lang.Throwable
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: protected
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> 
+                  long
+                  int
+                  Return type: void
+                  Modifiers: public final
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> 
+                  long
+                  Return type: void
+                  Modifiers: public final native
+               METHOD
+                  Name: equals
+                  Exceptions-> NONE
+                  Parameter types-> 
+                  java.lang.Object
+                  Return type: boolean
+                  Modifiers: public
+               METHOD
+                  Name: toString
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: class java.lang.String
+                  Modifiers: public
+               METHOD
+                  Name: hashCode
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: int
+                  Modifiers: public native
+               METHOD
+                  Name: getClass
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: class java.lang.Class
+                  Modifiers: public final native
+               METHOD
+                  Name: clone
+                  Exceptions->
+                  class java.lang.CloneNotSupportedException
+                  Parameter types-> NONE
+                  Return type: class java.lang.Object
+                  Modifiers: protected native
+               METHOD
+                  Name: notify
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final native
+               METHOD
+                  Name: notifyAll
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final native
+            FIELDS( class java.lang.Object )
+            Fields: NONE
+         INTERFACES( class ClassA )
+         Interfaces->
+         SUPERCLASS -> Recursively Inspect
+         interface java.io.Serializable
+            CLASS
+            Class: java.io.Serializable
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: null
+4
+            INTERFACES( interface java.io.Serializable )
+            Interfaces-> NONE
+            CONSTRUCTORS( interface java.io.Serializable )
+            Constructors-> NONE
+            METHODS( interface java.io.Serializable )
+            Methods-> NONE
+            FIELDS( interface java.io.Serializable )
+            Fields: NONE
+         SUPERCLASS -> Recursively Inspect
+         interface java.lang.Runnable
+            CLASS
+            Class: java.lang.Runnable
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: null
+4
+            INTERFACES( interface java.lang.Runnable )
+            Interfaces-> NONE
+            CONSTRUCTORS( interface java.lang.Runnable )
+            Constructors-> NONE
+            METHODS( interface java.lang.Runnable )
+            Methods->
+               METHOD
+                  Name: run
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public abstract
+            FIELDS( interface java.lang.Runnable )
+            Fields: NONE
+         CONSTRUCTORS( class ClassA )
+         Constructors->
+            CONSTRUCTORS->
+               Name: ClassA
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Modifiers: public
+            CONSTRUCTORS->
+               Name: ClassA
+               Exceptions-> NONE
+               Parameter types-> 
+               int
+               Modifiers: public
+         METHODS( class ClassA )
+         Methods->
+            METHOD
+               Name: run
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public
+            METHOD
+               Name: toString
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.String
+               Modifiers: public
+            METHOD
+               Name: printSomething
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: private
+            METHOD
+               Name: setVal
+               Exceptions->
+               class java.lang.Exception
+               Parameter types-> 
+               int
+               Return type: void
+               Modifiers: public
+            METHOD
+               Name: getVal
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: int
+               Modifiers: public
+         FIELDS( class ClassA )
+         Fields-> 
+            FIELD
+            Name: val
+            Type: int
+            Modifiers: private
+            Value:  100
+            FIELD
+            Name: val2
+            Type: double
+            Modifiers: private
+            Value:  0.2
+            FIELD
+            Name: val3
+            Type: boolean
+            Modifiers: private
+            Value:  true
+      FIELD
+      Name: val3
+      Type: class ClassA
+      Modifiers: private
+      Value: ClassA
+         -> Recursively inspect
+         CLASS
+         Class: ClassA
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: class java.lang.Object
+3
+            CLASS
+            Class: java.lang.Object
+            SuperClass: NONE
+            INTERFACES( class java.lang.Object )
+            Interfaces-> NONE
+            CONSTRUCTORS( class java.lang.Object )
+            Constructors->
+               CONSTRUCTORS->
+                  Name: java.lang.Object
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Modifiers: public
+            METHODS( class java.lang.Object )
+            Methods->
+               METHOD
+                  Name: finalize
+                  Exceptions->
+                  class java.lang.Throwable
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: protected
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> 
+                  long
+                  int
+                  Return type: void
+                  Modifiers: public final
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> 
+                  long
+                  Return type: void
+                  Modifiers: public final native
+               METHOD
+                  Name: equals
+                  Exceptions-> NONE
+                  Parameter types-> 
+                  java.lang.Object
+                  Return type: boolean
+                  Modifiers: public
+               METHOD
+                  Name: toString
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: class java.lang.String
+                  Modifiers: public
+               METHOD
+                  Name: hashCode
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: int
+                  Modifiers: public native
+               METHOD
+                  Name: getClass
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: class java.lang.Class
+                  Modifiers: public final native
+               METHOD
+                  Name: clone
+                  Exceptions->
+                  class java.lang.CloneNotSupportedException
+                  Parameter types-> NONE
+                  Return type: class java.lang.Object
+                  Modifiers: protected native
+               METHOD
+                  Name: notify
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final native
+               METHOD
+                  Name: notifyAll
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final native
+            FIELDS( class java.lang.Object )
+            Fields: NONE
+         INTERFACES( class ClassA )
+         Interfaces->
+         SUPERCLASS -> Recursively Inspect
+         interface java.io.Serializable
+            CLASS
+            Class: java.io.Serializable
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: null
+4
+            INTERFACES( interface java.io.Serializable )
+            Interfaces-> NONE
+            CONSTRUCTORS( interface java.io.Serializable )
+            Constructors-> NONE
+            METHODS( interface java.io.Serializable )
+            Methods-> NONE
+            FIELDS( interface java.io.Serializable )
+            Fields: NONE
+         SUPERCLASS -> Recursively Inspect
+         interface java.lang.Runnable
+            CLASS
+            Class: java.lang.Runnable
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: null
+4
+            INTERFACES( interface java.lang.Runnable )
+            Interfaces-> NONE
+            CONSTRUCTORS( interface java.lang.Runnable )
+            Constructors-> NONE
+            METHODS( interface java.lang.Runnable )
+            Methods->
+               METHOD
+                  Name: run
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public abstract
+            FIELDS( interface java.lang.Runnable )
+            Fields: NONE
+         CONSTRUCTORS( class ClassA )
+         Constructors->
+            CONSTRUCTORS->
+               Name: ClassA
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Modifiers: public
+            CONSTRUCTORS->
+               Name: ClassA
+               Exceptions-> NONE
+               Parameter types-> 
+               int
+               Modifiers: public
+         METHODS( class ClassA )
+         Methods->
+            METHOD
+               Name: run
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public
+            METHOD
+               Name: toString
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.String
+               Modifiers: public
+            METHOD
+               Name: printSomething
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: private
+            METHOD
+               Name: setVal
+               Exceptions->
+               class java.lang.Exception
+               Parameter types-> 
+               int
+               Return type: void
+               Modifiers: public
+            METHOD
+               Name: getVal
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: int
+               Modifiers: public
+         FIELDS( class ClassA )
+         Fields-> 
+            FIELD
+            Name: val
+            Type: int
+            Modifiers: private
+            Value:  2
+            FIELD
+            Name: val2
+            Type: double
+            Modifiers: private
+            Value:  0.2
+            FIELD
+            Name: val3
+            Type: boolean
+            Modifiers: private
+            Value:  true
+      FIELD
+      Name: val4
+      Type: class ClassA
+      Modifiers: private
+      Value: ClassA
+         -> Recursively inspect
+         CLASS
+         Class: ClassA
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: class java.lang.Object
+3
+            CLASS
+            Class: java.lang.Object
+            SuperClass: NONE
+            INTERFACES( class java.lang.Object )
+            Interfaces-> NONE
+            CONSTRUCTORS( class java.lang.Object )
+            Constructors->
+               CONSTRUCTORS->
+                  Name: java.lang.Object
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Modifiers: public
+            METHODS( class java.lang.Object )
+            Methods->
+               METHOD
+                  Name: finalize
+                  Exceptions->
+                  class java.lang.Throwable
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: protected
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> 
+                  long
+                  int
+                  Return type: void
+                  Modifiers: public final
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final
+               METHOD
+                  Name: wait
+                  Exceptions->
+                  class java.lang.InterruptedException
+                  Parameter types-> 
+                  long
+                  Return type: void
+                  Modifiers: public final native
+               METHOD
+                  Name: equals
+                  Exceptions-> NONE
+                  Parameter types-> 
+                  java.lang.Object
+                  Return type: boolean
+                  Modifiers: public
+               METHOD
+                  Name: toString
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: class java.lang.String
+                  Modifiers: public
+               METHOD
+                  Name: hashCode
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: int
+                  Modifiers: public native
+               METHOD
+                  Name: getClass
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: class java.lang.Class
+                  Modifiers: public final native
+               METHOD
+                  Name: clone
+                  Exceptions->
+                  class java.lang.CloneNotSupportedException
+                  Parameter types-> NONE
+                  Return type: class java.lang.Object
+                  Modifiers: protected native
+               METHOD
+                  Name: notify
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final native
+               METHOD
+                  Name: notifyAll
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public final native
+            FIELDS( class java.lang.Object )
+            Fields: NONE
+         INTERFACES( class ClassA )
+         Interfaces->
+         SUPERCLASS -> Recursively Inspect
+         interface java.io.Serializable
+            CLASS
+            Class: java.io.Serializable
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: null
+4
+            INTERFACES( interface java.io.Serializable )
+            Interfaces-> NONE
+            CONSTRUCTORS( interface java.io.Serializable )
+            Constructors-> NONE
+            METHODS( interface java.io.Serializable )
+            Methods-> NONE
+            FIELDS( interface java.io.Serializable )
+            Fields: NONE
+         SUPERCLASS -> Recursively Inspect
+         interface java.lang.Runnable
+            CLASS
+            Class: java.lang.Runnable
+            SUPERCLASS -> Recursively Inspect
+            SuperClass: null
+4
+            INTERFACES( interface java.lang.Runnable )
+            Interfaces-> NONE
+            CONSTRUCTORS( interface java.lang.Runnable )
+            Constructors-> NONE
+            METHODS( interface java.lang.Runnable )
+            Methods->
+               METHOD
+                  Name: run
+                  Exceptions-> NONE
+                  Parameter types-> NONE
+                  Return type: void
+                  Modifiers: public abstract
+            FIELDS( interface java.lang.Runnable )
+            Fields: NONE
+         CONSTRUCTORS( class ClassA )
+         Constructors->
+            CONSTRUCTORS->
+               Name: ClassA
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Modifiers: public
+            CONSTRUCTORS->
+               Name: ClassA
+               Exceptions-> NONE
+               Parameter types-> 
+               int
+               Modifiers: public
+         METHODS( class ClassA )
+         Methods->
+            METHOD
+               Name: run
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public
+            METHOD
+               Name: toString
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.String
+               Modifiers: public
+            METHOD
+               Name: printSomething
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: private
+            METHOD
+               Name: setVal
+               Exceptions->
+               class java.lang.Exception
+               Parameter types-> 
+               int
+               Return type: void
+               Modifiers: public
+            METHOD
+               Name: getVal
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: int
+               Modifiers: public
+         FIELDS( class ClassA )
+         Fields-> 
+            FIELD
+            Name: val
+            Type: int
+            Modifiers: private
+            Value:  3
+            FIELD
+            Name: val2
+            Type: double
+            Modifiers: private
+            Value:  0.2
+            FIELD
+            Name: val3
+            Type: boolean
+            Modifiers: private
+            Value:  true
+INTERFACES( class ClassB )
+Interfaces->
+SUPERCLASS -> Recursively Inspect
+interface java.lang.Runnable
+   CLASS
+   Class: java.lang.Runnable
+   SUPERCLASS -> Recursively Inspect
+   SuperClass: null
+1
+   INTERFACES( interface java.lang.Runnable )
+   Interfaces-> NONE
+   CONSTRUCTORS( interface java.lang.Runnable )
+   Constructors-> NONE
+   METHODS( interface java.lang.Runnable )
+   Methods->
+      METHOD
+         Name: run
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public abstract
+   FIELDS( interface java.lang.Runnable )
+   Fields: NONE
+CONSTRUCTORS( class ClassB )
+Constructors->
+   CONSTRUCTORS->
+      Name: ClassB
+      Exceptions->
+      class java.lang.Exception
+      Parameter types-> NONE
+      Modifiers: public
+METHODS( class ClassB )
+Methods->
+   METHOD
+      Name: run
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: void
+      Modifiers: public
+   METHOD
+      Name: toString
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: class java.lang.String
+      Modifiers: public
+   METHOD
+      Name: func3
+      Exceptions-> NONE
+      Parameter types-> 
+      int
+      Return type: void
+      Modifiers: public
+FIELDS( class ClassB )
+Fields-> 
+   FIELD
+   Name: val
+   Type: class ClassA
+   Modifiers: private
+   Value: ClassA
+      -> Recursively inspect
+      CLASS
+      Class: ClassA
+      SUPERCLASS -> Recursively Inspect
+      SuperClass: class java.lang.Object
+2
+         CLASS
+         Class: java.lang.Object
+         SuperClass: NONE
+         INTERFACES( class java.lang.Object )
+         Interfaces-> NONE
+         CONSTRUCTORS( class java.lang.Object )
+         Constructors->
+            CONSTRUCTORS->
+               Name: java.lang.Object
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Modifiers: public
+         METHODS( class java.lang.Object )
+         Methods->
+            METHOD
+               Name: finalize
+               Exceptions->
+               class java.lang.Throwable
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: protected
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               long
+               int
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               long
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: equals
+               Exceptions-> NONE
+               Parameter types-> 
+               java.lang.Object
+               Return type: boolean
+               Modifiers: public
+            METHOD
+               Name: toString
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.String
+               Modifiers: public
+            METHOD
+               Name: hashCode
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: int
+               Modifiers: public native
+            METHOD
+               Name: getClass
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.Class
+               Modifiers: public final native
+            METHOD
+               Name: clone
+               Exceptions->
+               class java.lang.CloneNotSupportedException
+               Parameter types-> NONE
+               Return type: class java.lang.Object
+               Modifiers: protected native
+            METHOD
+               Name: notify
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: notifyAll
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+         FIELDS( class java.lang.Object )
+         Fields: NONE
+      INTERFACES( class ClassA )
+      Interfaces->
+      SUPERCLASS -> Recursively Inspect
+      interface java.io.Serializable
+         CLASS
+         Class: java.io.Serializable
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: null
+3
+         INTERFACES( interface java.io.Serializable )
+         Interfaces-> NONE
+         CONSTRUCTORS( interface java.io.Serializable )
+         Constructors-> NONE
+         METHODS( interface java.io.Serializable )
+         Methods-> NONE
+         FIELDS( interface java.io.Serializable )
+         Fields: NONE
+      SUPERCLASS -> Recursively Inspect
+      interface java.lang.Runnable
+         CLASS
+         Class: java.lang.Runnable
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: null
+3
+         INTERFACES( interface java.lang.Runnable )
+         Interfaces-> NONE
+         CONSTRUCTORS( interface java.lang.Runnable )
+         Constructors-> NONE
+         METHODS( interface java.lang.Runnable )
+         Methods->
+            METHOD
+               Name: run
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public abstract
+         FIELDS( interface java.lang.Runnable )
+         Fields: NONE
+      CONSTRUCTORS( class ClassA )
+      Constructors->
+         CONSTRUCTORS->
+            Name: ClassA
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Modifiers: public
+         CONSTRUCTORS->
+            Name: ClassA
+            Exceptions-> NONE
+            Parameter types-> 
+            int
+            Modifiers: public
+      METHODS( class ClassA )
+      Methods->
+         METHOD
+            Name: run
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: void
+            Modifiers: public
+         METHOD
+            Name: toString
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: class java.lang.String
+            Modifiers: public
+         METHOD
+            Name: printSomething
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: void
+            Modifiers: private
+         METHOD
+            Name: setVal
+            Exceptions->
+            class java.lang.Exception
+            Parameter types-> 
+            int
+            Return type: void
+            Modifiers: public
+         METHOD
+            Name: getVal
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: int
+            Modifiers: public
+      FIELDS( class ClassA )
+      Fields-> 
+         FIELD
+         Name: val
+         Type: int
+         Modifiers: private
+         Value:  3
+         FIELD
+         Name: val2
+         Type: double
+         Modifiers: private
+         Value:  0.2
+         FIELD
+         Name: val3
+         Type: boolean
+         Modifiers: private
+         Value:  true
+   FIELD
+   Name: val2
+   Type: class ClassA
+   Modifiers: private
+   Value: ClassA
+      -> Recursively inspect
+      CLASS
+      Class: ClassA
+      SUPERCLASS -> Recursively Inspect
+      SuperClass: class java.lang.Object
+2
+         CLASS
+         Class: java.lang.Object
+         SuperClass: NONE
+         INTERFACES( class java.lang.Object )
+         Interfaces-> NONE
+         CONSTRUCTORS( class java.lang.Object )
+         Constructors->
+            CONSTRUCTORS->
+               Name: java.lang.Object
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Modifiers: public
+         METHODS( class java.lang.Object )
+         Methods->
+            METHOD
+               Name: finalize
+               Exceptions->
+               class java.lang.Throwable
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: protected
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               long
+               int
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final
+            METHOD
+               Name: wait
+               Exceptions->
+               class java.lang.InterruptedException
+               Parameter types-> 
+               long
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: equals
+               Exceptions-> NONE
+               Parameter types-> 
+               java.lang.Object
+               Return type: boolean
+               Modifiers: public
+            METHOD
+               Name: toString
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.String
+               Modifiers: public
+            METHOD
+               Name: hashCode
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: int
+               Modifiers: public native
+            METHOD
+               Name: getClass
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: class java.lang.Class
+               Modifiers: public final native
+            METHOD
+               Name: clone
+               Exceptions->
+               class java.lang.CloneNotSupportedException
+               Parameter types-> NONE
+               Return type: class java.lang.Object
+               Modifiers: protected native
+            METHOD
+               Name: notify
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+            METHOD
+               Name: notifyAll
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public final native
+         FIELDS( class java.lang.Object )
+         Fields: NONE
+      INTERFACES( class ClassA )
+      Interfaces->
+      SUPERCLASS -> Recursively Inspect
+      interface java.io.Serializable
+         CLASS
+         Class: java.io.Serializable
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: null
+3
+         INTERFACES( interface java.io.Serializable )
+         Interfaces-> NONE
+         CONSTRUCTORS( interface java.io.Serializable )
+         Constructors-> NONE
+         METHODS( interface java.io.Serializable )
+         Methods-> NONE
+         FIELDS( interface java.io.Serializable )
+         Fields: NONE
+      SUPERCLASS -> Recursively Inspect
+      interface java.lang.Runnable
+         CLASS
+         Class: java.lang.Runnable
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: null
+3
+         INTERFACES( interface java.lang.Runnable )
+         Interfaces-> NONE
+         CONSTRUCTORS( interface java.lang.Runnable )
+         Constructors-> NONE
+         METHODS( interface java.lang.Runnable )
+         Methods->
+            METHOD
+               Name: run
+               Exceptions-> NONE
+               Parameter types-> NONE
+               Return type: void
+               Modifiers: public abstract
+         FIELDS( interface java.lang.Runnable )
+         Fields: NONE
+      CONSTRUCTORS( class ClassA )
+      Constructors->
+         CONSTRUCTORS->
+            Name: ClassA
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Modifiers: public
+         CONSTRUCTORS->
+            Name: ClassA
+            Exceptions-> NONE
+            Parameter types-> 
+            int
+            Modifiers: public
+      METHODS( class ClassA )
+      Methods->
+         METHOD
+            Name: run
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: void
+            Modifiers: public
+         METHOD
+            Name: toString
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: class java.lang.String
+            Modifiers: public
+         METHOD
+            Name: printSomething
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: void
+            Modifiers: private
+         METHOD
+            Name: setVal
+            Exceptions->
+            class java.lang.Exception
+            Parameter types-> 
+            int
+            Return type: void
+            Modifiers: public
+         METHOD
+            Name: getVal
+            Exceptions-> NONE
+            Parameter types-> NONE
+            Return type: int
+            Modifiers: public
+      FIELDS( class ClassA )
+      Fields-> 
+         FIELD
+         Name: val
+         Type: int
+         Modifiers: private
+         Value:  12
+         FIELD
+         Name: val2
+         Type: double
+         Modifiers: private
+         Value:  0.2
+         FIELD
+         Name: val3
+         Type: boolean
+         Modifiers: private
+         Value:  true
+   FIELD
+   Name: val3
+   Type: class ClassA
+   Modifiers: private
+   Value: null
+      -> Recursively inspect
 ======================================================

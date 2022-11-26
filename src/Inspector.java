@@ -20,12 +20,15 @@ public class Inspector {
     }
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
-//        inspectName(c, obj, recursive, depth);
-//        inspectSuperclass(c, obj, recursive, depth);
-//        inspectInterface(c, obj, recursive, depth);
-//        inspectConstructor(c, obj, recursive, depth);
-//        inspectMethod(c, obj, recursive, depth);
-        inspectFields(c, obj, false, depth);
+        if (c == null) {
+            return;
+        }
+        inspectName(c, obj, recursive, depth);
+        inspectSuperclass(c, obj, recursive, depth);
+        inspectInterface(c, obj, recursive, depth);
+        inspectConstructor(c, obj, recursive, depth);
+        inspectMethod(c, obj, recursive, depth);
+        inspectFields(c, obj, recursive, depth);
     }
 
     private void inspectName(Class c, Object obj, boolean recursive, int depth) {
@@ -42,7 +45,7 @@ public class Inspector {
             System.out.println(dent(depth) + "Interfaces->");
             for (int i = 0; i < interfaceA.length; i++) {
                 System.out.println(dent(depth) + "SUPERCLASS -> Recursively Inspect\n" + dent(depth) + interfaceA[i]);
-                inspectClass(interfaceA[i], null, recursive, depth + 1);
+                inspectClass(interfaceA[i], obj, recursive, depth + 1);
 
             }
         }
@@ -50,12 +53,14 @@ public class Inspector {
     }
 
     private void inspectSuperclass(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
+
         Class superC = c.getSuperclass();
         if (superC == null && c == Object.class) {
             System.out.println(dent(depth) + "SuperClass: NONE");
         } else {
             System.out.println(dent(depth) + "SUPERCLASS -> Recursively Inspect\n" + dent(depth) + "SuperClass: " + superC);
-            inspectClass(superC, null, recursive, depth + 1);
+            System.out.println(depth);
+            inspectClass(c.getSuperclass(), obj, recursive, depth + 1);
         }
     }
 
@@ -138,108 +143,65 @@ public class Inspector {
     }
 
     private Field[] inspectFields(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
-        Field[] fields =c.getDeclaredFields();
-        System.out.println(depth+"FIELDS( "+c+" )");
-        System.out.print(depth+"Fields->");
-        if(fields.length==0){
-            System.out.println("None");
+        Field[] fields = c.getDeclaredFields();
+        System.out.println(dent(depth) + "FIELDS( " + c + " )");
+        if (fields.length == 0) {
+            System.out.println(dent(depth) + "Fields: " + "NONE");
             return fields;
         }
-        System.out.println();
-        for (int i=0;i<fields.length;i++){
-            System.out.println(depth+" "+"FIELD");
+        System.out.println(dent(depth) + "Fields-> ");
+        for (int i = 0; i < fields.length; i++) {
+            System.out.println(dent(depth+1)+ "FIELD");
             String fieldName = fields[i].getName();
             Class fieldType = fields[i].getType();
             int modifier = fields[i].getModifiers();
-            System.out.println(Modifier.toString(modifier));
             fields[i].setAccessible(true);
 
 
-// Array type handling:
-            if(fieldType.isArray()){
+            System.out.println(dent(depth+1) + "Name: " + fieldName);
+            System.out.println(dent(depth+1) + "Type: " + fieldType);
+            System.out.println(dent(depth+1) + "Modifiers: " + Modifier.toString(modifier));
+            if ((!fieldType.isPrimitive()) && (!recursive)) {
                 Object value = fields[i].get(obj);
-                System.out.println(depth+" "+" "+"Name:  "+ fieldName);
-                System.out.println(depth+" "+" "+"Type:  "+ fieldType.toString());
-                System.out.println(depth+" "+" "+"Modifiers:  "+ Modifier.toString(modifier));
-                String component = value.getClass().getComponentType().toString();
-                System.out.println(depth+" "+" "+"Component Type:  "+ component);
+                System.out.println(dent(depth+1) + "Value: " + value);
+            } else if (!fieldType.isPrimitive()) {
+                Object value = fields[i].get(obj);
+                System.out.println(dent(depth+1) + "Value: " + value);
+                System.out.println(dent(depth+2) + "-> Recursively inspect");
+                if (value != null) {
+                    inspectClass(value.getClass(), value, recursive, depth+2);
+                }
 
-                if(value.getClass().getComponentType().isPrimitive()){
-                    byte[] result = (byte[]) value;
-                    System.out.println(depth+" "+" "+"Length:  "+ result.length);
-                    System.out.println(depth+" "+" "+"Entries->");
-                    for(int j=0;j<result.length;j++){
-                        System.out.println(depth+" "+" "+"Value:  "+result[j]);
-                    }
-                }
-                else {
-                    Object[] result = (Object[]) value;
-                    System.out.println(depth+" "+" "+"Length:  "+ result.length);
-                    System.out.println(depth+" "+" "+"Entries->");
-                    for(int j=0;j<result.length;j++){
-                        if(result[j]!=null) {
-//                            inspectClass(result[j].getClass(), result[j], recursive, 1);
-                        }
-                        else{
-                            System.out.println(depth+" "+" "+"Value:  "+result[j]);
-                        }
-                    }
-                }
             }
-            else{
-                System.out.println(depth+" "+" "+"Name:  "+ fieldName);
-                System.out.println(depth+" "+" "+"Type:  "+ fieldType.toString());
-                System.out.println(depth+" "+" "+"Modifiers:  "+ Modifier.toString(modifier));
-                if((!fieldType.isPrimitive()) && (!recursive)){
-                    Object value = fields[i].get(obj);
-                    System.out.println(depth+" "+" "+"Value:  "+ value);
-                }
-                else if(!fieldType.isPrimitive()){
-                    Object value = fields[i].get(obj);
-                    System.out.println(depth+" "+" "+"Value:  "+ value);
-                    System.out.println(depth+" "+" "+" "+"-> Recursively inspect");
-                    if(value!=null){
-//                        inspectClass(value.getClass(),value,recursive,1);
-                    }
-                }
-                /////////////////GET PRIMITIVE DATA TYPE/////////////////////
-                else if(fieldType.isPrimitive()){
-                    //System.out.println(fields[i].getType());
-                    //System.out.println(fields[i].getInt(obj));
+            /////////////////GET PRIMITIVE DATA TYPE/////////////////////
+            else if (fieldType.isPrimitive()) {
+                //System.out.println(fields[i].getType());
+                //System.out.println(fields[i].getInt(obj));
 
-                    if(fields[i].getType().toString().equals("short")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getShort(obj));
-                    }
-                    else if(fields[i].getType().toString().equals("int")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getInt(obj));
-                    }
-                    else if(fields[i].getType().toString().equals("long")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getLong(obj));
-                    }
-                    else if(fields[i].getType().toString().equals("float")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getFloat(obj));
-                    }
-                    else if(fields[i].getType().toString().equals("double")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getDouble(obj));
-                    }
-                    else if(fields[i].getType().toString().equals("byte")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getByte(obj));
-                    }
-                    else if(fields[i].getType().toString().equals("boolean")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getBoolean(obj));
-                    }
-                    else if(fields[i].getType().toString().equals("char")){
-                        System.out.println(depth+" "+" "+"Value:  "+ fields[i].getChar(obj));
-                    }
-                    else{
-                        System.out.println("No matching primitive type");
-                    }
+                if (fields[i].getType().toString().equals("short")) {
+                    System.out.println(dent(depth+1) + "Value:  " + fields[i].getShort(obj));
+                } else if (fields[i].getType().toString().equals("int")) {
+                    System.out.println(dent(depth+1)+ "Value:  " + fields[i].getInt(obj));
+                } else if (fields[i].getType().toString().equals("long")) {
+                    System.out.println(dent(depth+1) + "Value:  " + fields[i].getLong(obj));
+                } else if (fields[i].getType().toString().equals("float")) {
+                    System.out.println(dent(depth+1)+ "Value:  " + fields[i].getFloat(obj));
+                } else if (fields[i].getType().toString().equals("double")) {
+                    System.out.println(dent(depth+1) + "Value:  " + fields[i].getDouble(obj));
+                } else if (fields[i].getType().toString().equals("byte")) {
+                    System.out.println(dent(depth+1) + "Value:  " + fields[i].getByte(obj));
+                } else if (fields[i].getType().toString().equals("boolean")) {
+                    System.out.println(dent(depth+1) + "Value:  " + fields[i].getBoolean(obj));
+                } else if (fields[i].getType().toString().equals("char")) {
+                    System.out.println(dent(depth+1)+ "Value:  " + fields[i].getChar(obj));
+                } else {
+                    System.out.println("No matching primitive type");
                 }
-                else{
-                    System.out.println(depth+" "+" "+"Error in getFields");
-                }
+            } else {
+                System.out.println(dent(depth+2) + "Error in getFields");
             }
         }
+
         return fields;
     }
 
