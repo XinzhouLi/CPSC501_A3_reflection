@@ -31,9 +31,10 @@ public class Inspector {
         inspectFields(c, obj, recursive, depth);
     }
 
-    private void inspectName(Class c, Object obj, boolean recursive, int depth) {
+    public String inspectName(Class c, Object obj, boolean recursive, int depth) {
         String name = c.getName();
         System.out.println(dent(depth) + "CLASS\n" + dent(depth) + "Class: " + name);
+        return name;
     }
 
     private void inspectInterface(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
@@ -52,16 +53,16 @@ public class Inspector {
 
     }
 
-    private void inspectSuperclass(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
+    public Class inspectSuperclass(Class c, Object obj, boolean recursive, int depth) throws IllegalAccessException {
 
         Class superC = c.getSuperclass();
         if (superC == null && c == Object.class) {
             System.out.println(dent(depth) + "SuperClass: NONE");
         } else {
             System.out.println(dent(depth) + "SUPERCLASS -> Recursively Inspect\n" + dent(depth) + "SuperClass: " + superC);
-            System.out.println(depth);
             inspectClass(c.getSuperclass(), obj, recursive, depth + 1);
         }
+        return superC;
     }
 
     private void inspectConstructor(Class c, Object obj, boolean recursive, int depth) {

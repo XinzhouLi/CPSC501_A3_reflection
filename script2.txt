@@ -164,12 +164,6 @@ Methods->
       Return type: class java.lang.String
       Modifiers: public
    METHOD
-      Name: printSomething
-      Exceptions-> NONE
-      Parameter types-> NONE
-      Return type: void
-      Modifiers: private
-   METHOD
       Name: setVal
       Exceptions->
       class java.lang.Exception
@@ -183,6 +177,12 @@ Methods->
       Parameter types-> NONE
       Return type: int
       Modifiers: public
+   METHOD
+      Name: printSomething
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: void
+      Modifiers: private
 FIELDS( class ClassA )
 Fields-> 
    FIELD
