@@ -140,16 +140,208 @@ SuperClass: class ClassC
             Name: val
             Type: class ClassA
             Modifiers: private
-            Value (ref): class ClassD
-               -> Recursively inspect
-         FIELD
-            Name: val2
-            Type: class ClassA
-            Modifiers: private static
-            Value (ref): class ClassD
-               -> Recursively inspect
-         FIELD
-            Name: val3
-            Type: int
-            Modifiers: private
-class ClassC
+            Value: null
+   INTERFACES( class ClassC )
+   Interfaces->
+   SUPERCLASS -> Recursively Inspect
+   interface InterfaceA
+      CLASS
+      Class: InterfaceA
+      SUPERCLASS -> Recursively Inspect
+      SuperClass: null
+      INTERFACES( interface InterfaceA )
+      Interfaces->
+      SUPERCLASS -> Recursively Inspect
+      interface InterfaceB
+         CLASS
+         Class: InterfaceB
+         SUPERCLASS -> Recursively Inspect
+         SuperClass: null
+         INTERFACES( interface InterfaceB )
+         Interfaces-> NONE
+         CONSTRUCTORS( interface InterfaceB )
+         Constructors-> NONE
+         METHODS( interface InterfaceB )
+         Methods->
+            METHOD
+               Name: func0
+               Exceptions->
+               class java.lang.Exception
+               Parameter types-> 
+               int
+               boolean
+               Return type: void
+               Modifiers: public abstract
+         FIELDS( interface InterfaceB )
+         Fields-> NONE
+      CONSTRUCTORS( interface InterfaceA )
+      Constructors-> NONE
+      METHODS( interface InterfaceA )
+      Methods->
+         METHOD
+            Name: func2
+            Exceptions->
+            class java.lang.Exception
+            class java.lang.ArithmeticException
+            class java.lang.IllegalMonitorStateException
+            Parameter types-> 
+            java.lang.String
+            Return type: int
+            Modifiers: public abstract
+         METHOD
+            Name: func1
+            Exceptions->
+            class java.lang.Exception
+            Parameter types-> 
+            int
+            double
+            boolean
+            java.lang.String
+            Return type: void
+            Modifiers: public abstract
+      FIELDS( interface InterfaceA )
+      Fields-> NONE
+   CONSTRUCTORS( class ClassC )
+   Constructors->
+      CONSTRUCTORS->
+         Name: ClassC
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Modifiers: public
+      CONSTRUCTORS->
+         Name: ClassC
+         Exceptions-> NONE
+         Parameter types-> 
+         int
+         int
+         Modifiers: public
+   METHODS( class ClassC )
+   Methods->
+      METHOD
+         Name: run
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public
+      METHOD
+         Name: toString
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: class java.lang.String
+         Modifiers: public
+      METHOD
+         Name: func0
+         Exceptions->
+         class java.lang.Exception
+         Parameter types-> 
+         int
+         boolean
+         Return type: void
+         Modifiers: public
+      METHOD
+         Name: func2
+         Exceptions->
+         class java.lang.Exception
+         class java.lang.ArithmeticException
+         class java.lang.IllegalMonitorStateException
+         Parameter types-> 
+         java.lang.String
+         Return type: int
+         Modifiers: public
+      METHOD
+         Name: func3
+         Exceptions-> NONE
+         Parameter types-> 
+         int
+         Return type: void
+         Modifiers: public abstract
+      METHOD
+         Name: func1
+         Exceptions->
+         class java.lang.Exception
+         Parameter types-> 
+         int
+         double
+         boolean
+         java.lang.String
+         Return type: void
+         Modifiers: public
+   FIELDS( class ClassC )
+   Fields->
+      FIELD
+         Name: val2
+         Type: class ClassA
+         Modifiers: private
+         Value: null
+INTERFACES( class ClassB )
+Interfaces->
+SUPERCLASS -> Recursively Inspect
+interface java.lang.Runnable
+   CLASS
+   Class: java.lang.Runnable
+   SUPERCLASS -> Recursively Inspect
+   SuperClass: null
+   INTERFACES( interface java.lang.Runnable )
+   Interfaces-> NONE
+   CONSTRUCTORS( interface java.lang.Runnable )
+   Constructors-> NONE
+   METHODS( interface java.lang.Runnable )
+   Methods->
+      METHOD
+         Name: run
+         Exceptions-> NONE
+         Parameter types-> NONE
+         Return type: void
+         Modifiers: public abstract
+   FIELDS( interface java.lang.Runnable )
+   Fields-> NONE
+CONSTRUCTORS( class ClassB )
+Constructors->
+   CONSTRUCTORS->
+      Name: ClassB
+      Exceptions->
+      class java.lang.Exception
+      Parameter types-> NONE
+      Modifiers: public
+METHODS( class ClassB )
+Methods->
+   METHOD
+      Name: run
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: void
+      Modifiers: public
+   METHOD
+      Name: toString
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: class java.lang.String
+      Modifiers: public
+   METHOD
+      Name: func3
+      Exceptions-> NONE
+      Parameter types-> 
+      int
+      Return type: void
+      Modifiers: public
+FIELDS( class ClassB )
+Fields->
+   FIELD
+      Name: val
+      Type: class ClassA
+      Modifiers: private
+      Value (ref): class ClassB
+         -> Recursively inspect
+   FIELD
+      Name: val2
+      Type: class ClassA
+      Modifiers: private
+      Value (ref): class ClassB
+         -> Recursively inspect
+   FIELD
+      Name: val3
+      Type: class ClassA
+      Modifiers: private
+      Value (ref): class ClassB
+         -> Recursively inspect
+======================================================

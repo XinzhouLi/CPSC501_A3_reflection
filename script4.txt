@@ -144,7 +144,7 @@ Fields->
       Name: val3
       Type: int
       Modifiers: private
-        Value:  32
+      Value:  32
    FIELD
       Name: vallarray
       Type: class [LClassA;

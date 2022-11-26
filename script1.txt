@@ -161,18 +161,6 @@ Methods->
       Return type: class java.lang.String
       Modifiers: public
    METHOD
-      Name: printSomething
-      Exceptions-> NONE
-      Parameter types-> NONE
-      Return type: void
-      Modifiers: private
-   METHOD
-      Name: getVal
-      Exceptions-> NONE
-      Parameter types-> NONE
-      Return type: int
-      Modifiers: public
-   METHOD
       Name: setVal
       Exceptions->
       class java.lang.Exception
@@ -180,21 +168,33 @@ Methods->
       int
       Return type: void
       Modifiers: public
+   METHOD
+      Name: getVal
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: int
+      Modifiers: public
+   METHOD
+      Name: printSomething
+      Exceptions-> NONE
+      Parameter types-> NONE
+      Return type: void
+      Modifiers: private
 FIELDS( class ClassA )
 Fields->
    FIELD
       Name: val
       Type: int
       Modifiers: private
-        Value:  3
+      Value:  3
    FIELD
       Name: val2
       Type: double
       Modifiers: private
-        Value:  0.2
+      Value:  0.2
    FIELD
       Name: val3
       Type: boolean
       Modifiers: private
-        Value:  true
+      Value:  true
 ======================================================
