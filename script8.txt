@@ -1474,4 +1474,3 @@ Methods->
       Modifiers: private static
 FIELDS( class java.lang.String )
 Fields->
-   FIELD

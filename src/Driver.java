@@ -1,5 +1,7 @@
-
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 
 /**
  * CPSC 501
@@ -38,7 +40,7 @@ public class Driver {
             System.out.println("======================================================");
             System.out.println("Filename: " + filename);
             System.out.println("Running Test: " + testObj);
-            
+
             System.out.println("Recursive: " + recursive);
             new Inspector().inspect(testObj, recursive);
             System.out.println("======================================================");
